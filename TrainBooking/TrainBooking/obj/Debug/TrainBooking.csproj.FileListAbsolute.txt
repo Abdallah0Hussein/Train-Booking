@@ -9,3 +9,5 @@ F:\DataBase Project\TrainBooking\TrainBooking\obj\Debug\TrainBooking.csproj.Gene
 F:\DataBase Project\TrainBooking\TrainBooking\obj\Debug\TrainBooking.csproj.CoreCompileInputs.cache
 F:\DataBase Project\TrainBooking\TrainBooking\obj\Debug\TrainBooking.exe
 F:\DataBase Project\TrainBooking\TrainBooking\obj\Debug\TrainBooking.pdb
+F:\DataBase Project\TrainBooking\TrainBooking\bin\Debug\TrainBooking.mdf
+F:\DataBase Project\TrainBooking\TrainBooking\bin\Debug\TrainBooking_log.ldf
