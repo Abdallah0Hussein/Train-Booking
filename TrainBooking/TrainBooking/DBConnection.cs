@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data.SqlClient;
+using System.IO;
 using System.Windows.Forms;
 
 namespace TrainBooking
@@ -8,7 +9,11 @@ namespace TrainBooking
     {
         public SqlConnection ConnectToDatabase()
         {
-            string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\TrainBooking.mdf;Integrated Security=True";
+            string fileName = "TrainBooking.mdf";
+            string directory = Directory.GetParent(Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).FullName).FullName;
+            string dir = Directory.GetParent(directory).FullName;
+            MessageBox.Show(dir);
+            string connectionString = $@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename={dir}\{fileName};Integrated Security=True";
             SqlConnection connection = new SqlConnection(connectionString);
             try
             {

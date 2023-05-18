@@ -22,12 +22,17 @@ namespace TrainBooking
         {
             DBConnection conn = new DBConnection();
             SqlConnection connection = conn.ConnectToDatabase();
+
             Signup signup = new Signup();
+
             string name = textBox1.Text;
             string email = textBox2.Text;
             string password = textBox3.Text;
+
             signup.Register(connection,name,email,password);
             MessageBox.Show("Signup is successful!");
+
+            connection.Close();
         }
     }
 }
