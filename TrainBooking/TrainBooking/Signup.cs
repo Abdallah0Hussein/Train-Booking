@@ -11,11 +11,8 @@ namespace TrainBooking
     {
         public void Register(SqlConnection connection, string name, string email, string password)
         {
-            SqlCommand command = new SqlCommand("INSERT INTO [User] (Name, Email, Password) VALUES (@name, @email, @password)", connection);
-            command.Parameters.AddWithValue("@name", name);
-            command.Parameters.AddWithValue("@email", email);
-            command.Parameters.AddWithValue("@password", password);
-            command.ExecuteNonQuery();
+            SqlCommand command = new SqlCommand("INSERT INTO [User] (Name, Email, Password) VALUES ('"+name+"', '"+email+"', '"+password+"')", connection);
+            command.ExecuteNonQuery();  
         }
     }
 }
