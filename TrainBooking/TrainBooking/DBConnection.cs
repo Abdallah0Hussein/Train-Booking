@@ -12,7 +12,7 @@ namespace TrainBooking
             string fileName = "TrainBooking.mdf";
             string directory = Directory.GetParent(Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).FullName).FullName;
             string dir = Directory.GetParent(directory).FullName;
-            MessageBox.Show(dir);
+            /*MessageBox.Show(dir);*/
             string connectionString = $@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename={dir}\{fileName};Integrated Security=True";
             SqlConnection connection = new SqlConnection(connectionString);
             try

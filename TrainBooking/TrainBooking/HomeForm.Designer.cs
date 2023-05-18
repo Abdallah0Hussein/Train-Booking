@@ -38,11 +38,11 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(321, 22);
+            this.label1.Location = new System.Drawing.Point(150, 26);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(127, 46);
+            this.label1.Size = new System.Drawing.Size(504, 46);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Home";
+            this.label1.Text = "Welcome To Train Booking";
             // 
             // label2
             // 

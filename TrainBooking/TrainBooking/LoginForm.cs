@@ -16,7 +16,7 @@ namespace TrainBooking
             // Call the ConnectToDatabase function to establish a connection to the database
             DBConnection conn = new DBConnection();
             SqlConnection connection = conn.ConnectToDatabase();
-            Login login = new Login();
+            UserAuthentication login = new UserAuthentication();
             string email = textBox1.Text;
             string password = textBox2.Text;
             // Check if the email and password match the database

@@ -74,10 +74,8 @@
     <Compile Include="HomeForm.Designer.cs">
       <DependentUpon>HomeForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Signup.cs" />
     <Compile Include="SignupForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +87,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TrainBookingDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="UserAuthentecation.cs" />
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>

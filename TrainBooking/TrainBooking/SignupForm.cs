@@ -23,7 +23,7 @@ namespace TrainBooking
             DBConnection conn = new DBConnection();
             SqlConnection connection = conn.ConnectToDatabase();
 
-            Signup signup = new Signup();
+            UserAuthentication signup = new UserAuthentication();
 
             string name = textBox1.Text;
             string email = textBox2.Text;
