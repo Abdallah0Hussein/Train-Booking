@@ -28,5 +28,6 @@ namespace TrainBooking
             SignupForm signupForm = new SignupForm();
             signupForm.ShowDialog();
         }
+
     }
 }
