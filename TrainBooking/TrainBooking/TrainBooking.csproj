@@ -63,7 +63,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin.cs" />
     <Compile Include="DBConnection.cs" />
+    <Compile Include="AdminPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPage.Designer.cs">
+      <DependentUpon>AdminPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddTrainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddTrainForm.Designer.cs">
+      <DependentUpon>AddTrainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateTrainForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateTrainForm2.Designer.cs">
+      <DependentUpon>UpdateTrainForm2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateTrainForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateTrainForm1.Designer.cs">
+      <DependentUpon>UpdateTrainForm1.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +115,12 @@
       <DependentUpon>TrainBookingDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="UserAuthentecation.cs" />
+    <EmbeddedResource Include="AdminPage.resx">
+      <DependentUpon>AdminPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateTrainForm2.resx">
+      <DependentUpon>UpdateTrainForm2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -107,6 +138,12 @@
     </Compile>
     <EmbeddedResource Include="SignupForm.resx">
       <DependentUpon>SignupForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddTrainForm.resx">
+      <DependentUpon>AddTrainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateTrainForm1.resx">
+      <DependentUpon>UpdateTrainForm1.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

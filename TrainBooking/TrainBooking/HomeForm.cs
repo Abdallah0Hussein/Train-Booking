@@ -17,13 +17,13 @@ namespace TrainBooking
             InitializeComponent();
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void LogInLink_Click(object sender, EventArgs e)
         {
             LoginForm loginForm = new LoginForm();
             loginForm.ShowDialog();
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void Sign_upLink_Click(object sender, EventArgs e)
         {
             SignupForm signupForm = new SignupForm();
             signupForm.ShowDialog();

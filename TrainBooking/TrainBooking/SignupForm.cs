@@ -18,7 +18,7 @@ namespace TrainBooking
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Sign_upButton_Click(object sender, EventArgs e)
         {
             DBConnection conn = new DBConnection();
             SqlConnection connection = conn.ConnectToDatabase();
@@ -34,5 +34,6 @@ namespace TrainBooking
 
             connection.Close();
         }
+
     }
 }

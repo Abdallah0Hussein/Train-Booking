@@ -11,7 +11,7 @@ namespace TrainBooking
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void LogInButton_Click(object sender, EventArgs e)
         {
             // Call the ConnectToDatabase function to establish a connection to the database
             DBConnection conn = new DBConnection();
