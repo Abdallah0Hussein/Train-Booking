@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data.SqlClient;
+using System.Security.Cryptography.X509Certificates;
 using System.Windows.Forms;
 
 namespace TrainBooking
@@ -25,7 +26,12 @@ namespace TrainBooking
                 // Check if the email and password match the database
                 if (login.customerCheckCredentials(connection, email, password))
                 {
+                    int CustomerID = login.CostumerID(connection, email, password);
+                    string Name = login.NameCostumer(connection, email, password);
                     MessageBox.Show("Login successful!");
+                    Customer customer = new Customer(CustomerID, Name, email, password);
+                    HomeCustomer homeCustomer = new HomeCustomer();
+                    homeCustomer.Show();
                 }
                 else
                 {
