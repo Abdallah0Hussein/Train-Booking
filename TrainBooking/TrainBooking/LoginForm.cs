@@ -29,8 +29,8 @@ namespace TrainBooking
                     int CustomerID = login.CostumerID(connection, email, password);
                     string Name = login.NameCostumer(connection, email, password);
                     MessageBox.Show("Login successful!");
-                    Customer customer = new Customer(CustomerID, Name, email, password);
-                    HomeCustomer homeCustomer = new HomeCustomer();
+                    Customer.InitializeCus(CustomerID, Name, email, password);
+                    CustomerHomeForm homeCustomer = new CustomerHomeForm();
                     homeCustomer.Show();
                 }
                 else

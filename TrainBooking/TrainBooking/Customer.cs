@@ -8,7 +8,7 @@ namespace TrainBooking
 {
     public class Customer
     {
-        public static Customer cus; 
+        public static Customer cus;
         public int CustomerID { get; set; }
         public string Name { get; set; }
         public string Email { get; set; }
@@ -33,9 +33,10 @@ namespace TrainBooking
             Email = email;
             Password = password;
         }
-        public void initalizeCus(int id, string name, string email, string password)
+
+        public static void InitializeCus(int id, string name, string email, string password)
         {
-            cus = new Customer(id,name,email,password);
+            cus = new Customer(id, name, email, password);
         }
-    } 
+    }
 }

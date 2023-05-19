@@ -1,8 +1,5 @@
 ﻿using System.Data.SqlClient;
 using System.Text.RegularExpressions;
-using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
-using System.Xml.Linq;
 
 namespace TrainBooking
 {
@@ -45,7 +42,7 @@ namespace TrainBooking
         }
         public int CostumerID(SqlConnection connection, string email, string password)
         {
-            SqlCommand command = new SqlCommand("SELECT CoustomerID FROM [User] WHERE Email = @email AND Password = @password", connection);
+            SqlCommand command = new SqlCommand("SELECT UserID FROM [User] WHERE Email = @email AND Password = @password", connection);
             command.Parameters.AddWithValue("@email", email);
             command.Parameters.AddWithValue("@password", password);
 
@@ -62,6 +59,17 @@ namespace TrainBooking
             string count = (string)command.ExecuteScalar();
             return count;
         }
+        public void updateCustomer(SqlConnection connection, int ID, string name, string email, string password)
+        {
+            SqlCommand command = new SqlCommand( "UPDATE [User] SET Name = @name, Password = @password,Email = @email WHERE UserID = @ID",connection);
 
+                command.Parameters.AddWithValue("@name", name);
+                command.Parameters.AddWithValue("@email", email);
+                command.Parameters.AddWithValue("@password", password);
+                command.Parameters.AddWithValue("@ID", ID);
+                command.ExecuteNonQuery();
+            }
+        }
+   
     }
-}
+

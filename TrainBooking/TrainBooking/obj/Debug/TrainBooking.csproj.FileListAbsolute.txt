@@ -61,3 +61,6 @@ F:\level two\Second Semster\Software1\Github\Train-Booking\TrainBooking\TrainBoo
 F:\level two\Second Semster\Software1\Github\Train-Booking\TrainBooking\TrainBooking\obj\Debug\TrainBooking.HomeCustomer.resources
 F:\level two\Second Semster\Software1\Github\Train-Booking\TrainBooking\TrainBooking\obj\Debug\TrainBooking.BookingScreen.resources
 F:\level two\Second Semster\Software1\Github\Train-Booking\TrainBooking\TrainBooking\obj\Debug\TrainBooking.Update.resources
+F:\DataBase Project\TrainBooking\TrainBooking\obj\Debug\TrainBooking.BookingForm.resources
+F:\DataBase Project\TrainBooking\TrainBooking\obj\Debug\TrainBooking.CustomerHomeForm.resources
+F:\DataBase Project\TrainBooking\TrainBooking\obj\Debug\TrainBooking.CustomerUpdate.resources
