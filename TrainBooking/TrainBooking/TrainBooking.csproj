@@ -77,6 +77,24 @@
     <Compile Include="AddTrainForm.Designer.cs">
       <DependentUpon>AddTrainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddTripForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddTripForm.Designer.cs">
+      <DependentUpon>AddTripForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateTripForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateTripForm2.Designer.cs">
+      <DependentUpon>UpdateTripForm2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateTripForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateTripForm1.Designer.cs">
+      <DependentUpon>UpdateTripForm1.cs</DependentUpon>
+    </Compile>
     <Compile Include="UpdateTrainForm2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,8 +133,14 @@
       <DependentUpon>TrainBookingDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="UserAuthentecation.cs" />
+    <EmbeddedResource Include="AddTripForm.resx">
+      <DependentUpon>AddTripForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminPage.resx">
       <DependentUpon>AdminPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateTripForm2.resx">
+      <DependentUpon>UpdateTripForm2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateTrainForm2.resx">
       <DependentUpon>UpdateTrainForm2.cs</DependentUpon>
@@ -144,6 +168,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateTrainForm1.resx">
       <DependentUpon>UpdateTrainForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateTripForm1.resx">
+      <DependentUpon>UpdateTripForm1.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

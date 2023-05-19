@@ -19,7 +19,7 @@ namespace TrainBooking
 
         private void UpdateTrain_Click(object sender, EventArgs e)
         {
-            int trainID = Convert.ToInt32(UpdateTrainForm1.instance.trainID);
+            int trainID = UpdateTrainForm1.instance.trainID;
             string name = TrainName.Text;
             string status = TrainStatus.Text;
             // Want Validation if its really a number

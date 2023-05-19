@@ -19,13 +19,14 @@ namespace TrainBooking
 
         private void AddTrainLink_Click(object sender, EventArgs e)
         {
-            AddTrainForm AddTrainForm = new AddTrainForm();
-            AddTrainForm.ShowDialog();
+            AddTrainForm addTrainForm = new AddTrainForm();
+            addTrainForm.ShowDialog();
         }
 
         private void AddTripLink_Click(object sender, EventArgs e)
         {
-            
+            AddTripForm addTripForm = new AddTripForm();
+            addTripForm.ShowDialog();
         }
 
         private void UpdateTrainLink_Click(object sender, EventArgs e)
@@ -36,7 +37,8 @@ namespace TrainBooking
 
         private void UpdateTripLink_Click(object sender, EventArgs e)
         {
-
+            UpdateTripForm1 updateTripForm = new UpdateTripForm1();
+            updateTripForm.ShowDialog();
         }
     }
 }

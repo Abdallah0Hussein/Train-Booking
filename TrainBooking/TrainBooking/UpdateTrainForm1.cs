@@ -13,12 +13,12 @@ namespace TrainBooking
     public partial class UpdateTrainForm1 : Form
     {
         public static UpdateTrainForm1 instance;
-        public String trainID;
+        public int trainID;
         public UpdateTrainForm1()
         {
             InitializeComponent();
             instance = this;
-            trainID = TrainID.Text;
+            trainID = (int) nTrainID.Value;
         }
 
         private void SendTrainID_Click(object sender, EventArgs e)
