@@ -35,6 +35,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.name = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.ID = new System.Windows.Forms.TextBox();
             UpdataButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -109,12 +111,33 @@
             this.label2.TabIndex = 11;
             this.label2.Text = "Name";
             // 
-            // Update
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Location = new System.Drawing.Point(157, 61);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(36, 29);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "ID";
+            // 
+            // ID
+            // 
+            this.ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.ID.Location = new System.Drawing.Point(319, 61);
+            this.ID.Name = "ID";
+            this.ID.Size = new System.Drawing.Size(325, 34);
+            this.ID.TabIndex = 19;
+            // 
+            // CustomerUpdate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.ClientSize = new System.Drawing.Size(778, 431);
+            this.Controls.Add(this.ID);
+            this.Controls.Add(this.label1);
             this.Controls.Add(UpdataButton);
             this.Controls.Add(this.Password);
             this.Controls.Add(this.label4);
@@ -122,7 +145,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.name);
             this.Controls.Add(this.label2);
-            this.Name = "Update";
+            this.Name = "CustomerUpdate";
             this.Text = "Update";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -137,5 +160,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox name;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox ID;
     }
 }

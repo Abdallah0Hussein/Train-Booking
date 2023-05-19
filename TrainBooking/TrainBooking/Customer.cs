@@ -32,6 +32,9 @@ namespace TrainBooking
             Name = name;
             Email = email;
             Password = password;
+            cus.Name = name;
+            cus.Email = email;
+            cus.Password = password;
         }
 
         public static void InitializeCus(int id, string name, string email, string password)
