@@ -1,4 +1,6 @@
 ﻿using System.Data.SqlClient;
+using System.Text.RegularExpressions;
+using System.Windows.Forms;
 
 namespace TrainBooking
 {
@@ -32,5 +34,13 @@ namespace TrainBooking
             SqlCommand command = new SqlCommand("INSERT INTO [Admin] (Name, Email, Password) VALUES ('" + name + "', '" + email + "', '" + password + "')", connection);
             command.ExecuteNonQuery();
         }
+        public bool isValidEmail(string email)
+        {
+            // A Form of E-mail following IETF standards
+            string emailPattern = @"^[^@.]+(.[^@.]+)?(@[A-Za-z0-9]+)(\\-[A-Za-z0-9]+)?(.[0-9]*[A-Za-z]+[0-9]*(\\-[A-Za-z0-9]+)?)+$";
+            // If the user's email follow the regex form return true, false otherwise
+            return Regex.IsMatch(email, emailPattern);
+        }
+
     }
 }

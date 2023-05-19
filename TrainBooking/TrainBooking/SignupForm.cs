@@ -1,15 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
-using System.Xml.Linq;
 
 namespace TrainBooking
 {
@@ -19,9 +10,10 @@ namespace TrainBooking
         {
             InitializeComponent();
         }
-
         private void Sign_upButton_Click(object sender, EventArgs e)
         {
+            ErrorProvider errorProvider = new ErrorProvider();
+
             DBConnection conn = new DBConnection();
             SqlConnection connection = conn.ConnectToDatabase();
 
@@ -31,32 +23,30 @@ namespace TrainBooking
             string name = this.name.Text;
             string email = Email.Text;
             string password = Password.Text;
-            if (type == "Customer")
+
+            if (!signup.isValidEmail(email))
             {
-                signup.customerRegister(connection, name, email, password);
-                MessageBox.Show("Signup is successful!");
+                // Set the error message and icon for the Email TextBox
+                errorProvider.SetError(Email, "Enter a valid Email");
             }
             else
             {
-                signup.adminRegister(connection, name, email, password);
-                MessageBox.Show("Signup is successful!");
+                // Clear the error message and icon for the Email TextBox
+                errorProvider.SetError(Email, string.Empty);
+
+                if (type == "Customer")
+                {
+                    signup.customerRegister(connection, name, email, password);
+                    MessageBox.Show("Signup is successful!");
+                }
+                else
+                {
+                    signup.adminRegister(connection, name, email, password);
+                    MessageBox.Show("Signup is successful!");
+                }
             }
+
             connection.Close();
         }
-
     }
 }
-/*string type = Type.Text;
-string name = Name.Text;
-string email = Email.Text;
-string password = Password.Text;
-if (type == "Customer")
-{
-    signup.customerRegister(connection, name, email, password);
-    MessageBox.Show("Signup is successful!");
-}
-else
-{
-    signup.adminRegister(connection, name, email, password);
-    MessageBox.Show("Signup is successful!");
-}*/
