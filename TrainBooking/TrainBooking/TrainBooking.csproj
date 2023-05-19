@@ -64,7 +64,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Admin.cs" />
-    <Compile Include="Trip.cs" />
+    <Compile Include="Bookingattribuits.cs" />
+    <Compile Include="BookingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookingForm.Designer.cs">
+      <DependentUpon>BookingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer.cs" />
     <Compile Include="DBConnection.cs" />
     <Compile Include="AdminPage.cs">
       <SubType>Form</SubType>
@@ -83,6 +90,18 @@
     </Compile>
     <Compile Include="AddTripForm.Designer.cs">
       <DependentUpon>AddTripForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerHomeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerHomeForm.Designer.cs">
+      <DependentUpon>CustomerHomeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerUpdate.Designer.cs">
+      <DependentUpon>CustomerUpdate.cs</DependentUpon>
     </Compile>
     <Compile Include="UpdateTripForm2.cs">
       <SubType>Form</SubType>
@@ -139,6 +158,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminPage.resx">
       <DependentUpon>AdminPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookingForm.resx">
+      <DependentUpon>BookingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerHomeForm.resx">
+      <DependentUpon>CustomerHomeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerUpdate.resx">
+      <DependentUpon>CustomerUpdate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateTripForm2.resx">
       <DependentUpon>UpdateTripForm2.cs</DependentUpon>

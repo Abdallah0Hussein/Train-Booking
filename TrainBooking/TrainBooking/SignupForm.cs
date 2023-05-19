@@ -29,6 +29,19 @@ namespace TrainBooking
                 // Set the error message and icon for the Email TextBox
                 errorProvider.SetError(Email, "Enter a valid Email");
             }
+            else if (signup.IsEmailExist(connection, email))
+            {
+                // Set the error message and icon for the Email TextBox
+                errorProvider.SetError(Email, "This Email is exist");
+            }
+            else if (string.IsNullOrEmpty(name))
+            {
+                errorProvider.SetError(this.name, "Name is required.");
+            }
+            else if (string.IsNullOrEmpty(password))
+            {
+                errorProvider.SetError(Password, "Password is required.");
+            }
             else
             {
                 // Clear the error message and icon for the Email TextBox

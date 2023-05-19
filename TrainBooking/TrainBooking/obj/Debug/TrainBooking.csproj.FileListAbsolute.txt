@@ -58,9 +58,9 @@ F:\level two\Second Semster\Software1\Github\Train-Booking\TrainBooking\TrainBoo
 F:\level two\Second Semster\Software1\Github\Train-Booking\TrainBooking\TrainBooking\obj\Debug\TrainBooking.AddTrainForm.resources
 F:\level two\Second Semster\Software1\Github\Train-Booking\TrainBooking\TrainBooking\obj\Debug\TrainBooking.UpdateTrainForm1.resources
 F:\level two\Second Semster\Software1\Github\Train-Booking\TrainBooking\TrainBooking\obj\Debug\TrainBooking.UpdateTripForm1.resources
-C:\Users\ahmal\Source\Repos\Train-Booking\TrainBooking\TrainBooking\obj\Debug\TrainBooking.AddTripForm.resources
-C:\Users\ahmal\Source\Repos\Train-Booking\TrainBooking\TrainBooking\obj\Debug\TrainBooking.UpdateTripForm2.resources
-C:\Users\ahmal\Source\Repos\Train-Booking\TrainBooking\TrainBooking\obj\Debug\TrainBooking.UpdateTrainForm2.resources
-C:\Users\ahmal\Source\Repos\Train-Booking\TrainBooking\TrainBooking\obj\Debug\TrainBooking.AddTrainForm.resources
-C:\Users\ahmal\Source\Repos\Train-Booking\TrainBooking\TrainBooking\obj\Debug\TrainBooking.UpdateTrainForm1.resources
-C:\Users\ahmal\Source\Repos\Train-Booking\TrainBooking\TrainBooking\obj\Debug\TrainBooking.UpdateTripForm1.resources
+F:\level two\Second Semster\Software1\Github\Train-Booking\TrainBooking\TrainBooking\obj\Debug\TrainBooking.HomeCustomer.resources
+F:\level two\Second Semster\Software1\Github\Train-Booking\TrainBooking\TrainBooking\obj\Debug\TrainBooking.BookingScreen.resources
+F:\level two\Second Semster\Software1\Github\Train-Booking\TrainBooking\TrainBooking\obj\Debug\TrainBooking.Update.resources
+F:\DataBase Project\TrainBooking\TrainBooking\obj\Debug\TrainBooking.BookingForm.resources
+F:\DataBase Project\TrainBooking\TrainBooking\obj\Debug\TrainBooking.CustomerHomeForm.resources
+F:\DataBase Project\TrainBooking\TrainBooking\obj\Debug\TrainBooking.CustomerUpdate.resources
