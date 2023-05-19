@@ -31,8 +31,10 @@
             this.LogInButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.Email = new System.Windows.Forms.TextBox();
+            this.Password = new System.Windows.Forms.TextBox();
+            this.Type = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // LogInButton
@@ -69,22 +71,46 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Password";
             // 
-            // textBox1
+            // Email
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.textBox1.Location = new System.Drawing.Point(194, 79);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(316, 34);
-            this.textBox1.TabIndex = 3;
+            this.Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.Email.Location = new System.Drawing.Point(194, 79);
+            this.Email.Name = "Email";
+            this.Email.Size = new System.Drawing.Size(316, 34);
+            this.Email.TabIndex = 3;
             // 
-            // textBox2
+            // Password
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.textBox2.Location = new System.Drawing.Point(194, 135);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(316, 34);
-            this.textBox2.TabIndex = 4;
+            this.Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.Password.Location = new System.Drawing.Point(194, 135);
+            this.Password.Name = "Password";
+            this.Password.PasswordChar = '*';
+            this.Password.Size = new System.Drawing.Size(316, 34);
+            this.Password.TabIndex = 4;
+            // 
+            // Type
+            // 
+            this.Type.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Type.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.5F);
+            this.Type.FormattingEnabled = true;
+            this.Type.Items.AddRange(new object[] {
+            "Admin",
+            "Customer"});
+            this.Type.Location = new System.Drawing.Point(194, 21);
+            this.Type.Name = "Type";
+            this.Type.Size = new System.Drawing.Size(316, 34);
+            this.Type.TabIndex = 5;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label3.Location = new System.Drawing.Point(42, 26);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(68, 29);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Type";
             // 
             // LoginForm
             // 
@@ -92,8 +118,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.ClientSize = new System.Drawing.Size(568, 318);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.Type);
+            this.Controls.Add(this.Password);
+            this.Controls.Add(this.Email);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.LogInButton);
@@ -109,8 +137,10 @@
         private System.Windows.Forms.Button LogInButton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox Email;
+        private System.Windows.Forms.TextBox Password;
+        private System.Windows.Forms.ComboBox Type;
+        private System.Windows.Forms.Label label3;
     }
 }
 

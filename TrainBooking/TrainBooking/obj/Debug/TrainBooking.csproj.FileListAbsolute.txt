@@ -44,3 +44,10 @@ C:\Users\ahmal\Source\Repos\Train-Booking\TrainBooking\TrainBooking\obj\Debug\Tr
 C:\Users\ahmal\Source\Repos\Train-Booking\TrainBooking\TrainBooking\obj\Debug\TrainBooking.csproj.CoreCompileInputs.cache
 C:\Users\ahmal\Source\Repos\Train-Booking\TrainBooking\TrainBooking\obj\Debug\TrainBooking.exe
 C:\Users\ahmal\Source\Repos\Train-Booking\TrainBooking\TrainBooking\obj\Debug\TrainBooking.pdb
+F:\DataBase Project\TrainBooking\TrainBooking\obj\Debug\TrainBooking.AddTripForm.resources
+F:\DataBase Project\TrainBooking\TrainBooking\obj\Debug\TrainBooking.AdminPage.resources
+F:\DataBase Project\TrainBooking\TrainBooking\obj\Debug\TrainBooking.UpdateTripForm2.resources
+F:\DataBase Project\TrainBooking\TrainBooking\obj\Debug\TrainBooking.UpdateTrainForm2.resources
+F:\DataBase Project\TrainBooking\TrainBooking\obj\Debug\TrainBooking.AddTrainForm.resources
+F:\DataBase Project\TrainBooking\TrainBooking\obj\Debug\TrainBooking.UpdateTrainForm1.resources
+F:\DataBase Project\TrainBooking\TrainBooking\obj\Debug\TrainBooking.UpdateTripForm1.resources

@@ -172,6 +172,7 @@
             // 
             // SrcStation
             // 
+            this.SrcStation.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.SrcStation.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.5F);
             this.SrcStation.FormattingEnabled = true;
             this.SrcStation.Items.AddRange(new object[] {
@@ -190,6 +191,7 @@
             // 
             // DestStation
             // 
+            this.DestStation.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.DestStation.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.5F);
             this.DestStation.FormattingEnabled = true;
             this.DestStation.Items.AddRange(new object[] {

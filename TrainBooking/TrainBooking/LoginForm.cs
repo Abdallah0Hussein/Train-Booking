@@ -17,19 +17,38 @@ namespace TrainBooking
             DBConnection conn = new DBConnection();
             SqlConnection connection = conn.ConnectToDatabase();
             UserAuthentication login = new UserAuthentication();
-            string email = textBox1.Text;
-            string password = textBox2.Text;
-            // Check if the email and password match the database
-            if (login.CheckCredentials(connection, email, password))
+            string type = Type.Text;
+            string email = Email.Text;
+            string password = Password.Text;
+            if (type == "Customer")
             {
-                MessageBox.Show("Login successful!");
+                // Check if the email and password match the database
+                if (login.customerCheckCredentials(connection, email, password))
+                {
+                    MessageBox.Show("Login successful!");
+                }
+                else
+                {
+                    MessageBox.Show("Invalid credentials!");
+                }
             }
             else
             {
-                MessageBox.Show("Invalid credentials!");
+                // Check if the email and password match the database
+                if (login.adminCheckCredentials(connection, email, password))
+                {
+                    MessageBox.Show("Login successful!");
+                    AdminPage adminPage = new AdminPage();
+                    adminPage.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Invalid credentials!");
+                }
             }
             // Close the database connection
             connection.Close();
         }
+
     }
 }
