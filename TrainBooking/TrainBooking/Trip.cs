@@ -16,10 +16,11 @@ namespace TrainBooking
         public string depatureT;
         public string arrivalT;
 
-        public int TrainID { get => trainID;}
-        public int DriverID { get => driverID;}
+        public int TrainID { get => trainID; }
+        public int DriverID { get => driverID; }
 
-        public Trip(DateTime depatureT, DateTime arrivalT) {
+        public Trip(DateTime depatureT, DateTime arrivalT)
+        {
             this.depatureT = depatureT.ToShortDateString() + " " + depatureT.ToShortTimeString();
             this.arrivalT = depatureT.ToShortDateString() + " " + depatureT.ToShortTimeString();
         }
