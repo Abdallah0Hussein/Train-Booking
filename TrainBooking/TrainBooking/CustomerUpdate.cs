@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TrainBooking
@@ -19,7 +12,8 @@ namespace TrainBooking
             this.Load += CustomerUpdate_Load; // Add the event handler to the Load event
         }
 
-        private void CustomerUpdate_Load(object sender, EventArgs e) {
+        private void CustomerUpdate_Load(object sender, EventArgs e)
+        {
             // Your code to retrieve and assign values to textboxes
             int cID = Customer.cus.CustomerID;
             string cName = Customer.cus.Name;
@@ -39,16 +33,41 @@ namespace TrainBooking
 
             DBConnection conn = new DBConnection();
             SqlConnection connection = conn.ConnectToDatabase();
-            UserAuthentication login = new UserAuthentication();
+            UserAuthentication auth = new UserAuthentication();
+
+            string cEmail = Customer.cus.Email;
 
             string name = this.name.Text;
             string email = Email.Text;
             string password = Password.Text;
             int cID = Customer.cus.CustomerID;
-            
-            login.updateCustomer(connection, cID, name, email, password);
-            Customer.cus.UpdateDetails(name, email, password);
-            MessageBox.Show("Updated!")
+            if (!auth.isValidEmail(email))
+            {
+                // Set the error message and icon for the Email TextBox
+                errorProvider.SetError(Email, "Enter a valid Email");
+            }
+            else if (auth.IsEmailExist(connection, email) && email != cEmail)
+            {
+                // Set the error message and icon for the Email TextBox
+                errorProvider.SetError(Email, "This Email is exist");
+            }
+            else if (string.IsNullOrEmpty(name))
+            {
+                errorProvider.SetError(this.name, "Name is required.");
+            }
+            else if (string.IsNullOrEmpty(password))
+            {
+                errorProvider.SetError(Password, "Password is required.");
+            }
+            else
+            {
+                // Clear the error message and icon for the Email TextBox
+                errorProvider.SetError(Email, string.Empty);
+                auth.updateCustomer(connection, cID, name, email, password);
+                Customer.cus.UpdateDetails(name, email, password);
+                MessageBox.Show("Updated!");
+            }
+
         }
     }
 }

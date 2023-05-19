@@ -61,15 +61,24 @@ namespace TrainBooking
         }
         public void updateCustomer(SqlConnection connection, int ID, string name, string email, string password)
         {
-            SqlCommand command = new SqlCommand( "UPDATE [User] SET Name = @name, Password = @password,Email = @email WHERE UserID = @ID",connection);
+            SqlCommand command = new SqlCommand("UPDATE [User] SET Name = @name, Password = @password,Email = @email WHERE UserID = @ID", connection);
 
-                command.Parameters.AddWithValue("@name", name);
-                command.Parameters.AddWithValue("@email", email);
-                command.Parameters.AddWithValue("@password", password);
-                command.Parameters.AddWithValue("@ID", ID);
-                command.ExecuteNonQuery();
-            }
+            command.Parameters.AddWithValue("@name", name);
+            command.Parameters.AddWithValue("@email", email);
+            command.Parameters.AddWithValue("@password", password);
+            command.Parameters.AddWithValue("@ID", ID);
+            command.ExecuteNonQuery();
         }
-   
+        public bool IsEmailExist(SqlConnection connection, string email)
+        {
+            SqlCommand command = new SqlCommand("SELECT COUNT(*) FROM [User] WHERE Email = @Email", connection);
+
+            command.Parameters.AddWithValue("@Email", email);
+            int count = (int)command.ExecuteScalar();
+            return count == 1;
+
+        }
     }
+
+}
 
