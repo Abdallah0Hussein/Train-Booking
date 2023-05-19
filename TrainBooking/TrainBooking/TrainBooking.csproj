@@ -64,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Admin.cs" />
+    <Compile Include="Trip.cs" />
     <Compile Include="DBConnection.cs" />
     <Compile Include="AdminPage.cs">
       <SubType>Form</SubType>

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.AddTrip = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -42,8 +43,12 @@
             this.label8 = new System.Windows.Forms.Label();
             this.SrcStation = new System.Windows.Forms.ComboBox();
             this.DestStation = new System.Windows.Forms.ComboBox();
+            this.Depature_Arrival = new System.Windows.Forms.ErrorProvider(this.components);
+            this.SrcEqDest = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.TrainID)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DriverID)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Depature_Arrival)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SrcEqDest)).BeginInit();
             this.SuspendLayout();
             // 
             // AddTrip
@@ -119,7 +124,7 @@
             this.ArrivalTime.Name = "ArrivalTime";
             this.ArrivalTime.Size = new System.Drawing.Size(407, 34);
             this.ArrivalTime.TabIndex = 27;
-            this.ArrivalTime.Value = new System.DateTime(2023, 5, 19, 9, 55, 39, 0);
+            this.ArrivalTime.Value = new System.DateTime(2023, 5, 20, 0, 0, 0, 0);
             // 
             // label5
             // 
@@ -180,10 +185,12 @@
             "Valentine",
             "Van Horn",
             "Saint Denis",
-            "Black Water",
+            "Blackwater",
             "Strawberry",
             "Annesburg",
-            "Riggs Station"});
+            "Riggs Station",
+            "Emerald Station",
+            "Bacchus Station "});
             this.SrcStation.Location = new System.Drawing.Point(299, 392);
             this.SrcStation.Name = "SrcStation";
             this.SrcStation.Size = new System.Drawing.Size(407, 34);
@@ -199,14 +206,24 @@
             "Valentine",
             "Van Horn",
             "Saint Denis",
-            "Black Water",
+            "Blackwater",
             "Strawberry",
             "Annesburg",
-            "Riggs Station"});
+            "Riggs Station",
+            "Emerald Station",
+            "Bacchus Station "});
             this.DestStation.Location = new System.Drawing.Point(299, 462);
             this.DestStation.Name = "DestStation";
             this.DestStation.Size = new System.Drawing.Size(407, 34);
             this.DestStation.TabIndex = 39;
+            // 
+            // Depature_Arrival
+            // 
+            this.Depature_Arrival.ContainerControl = this;
+            // 
+            // SrcEqDest
+            // 
+            this.SrcEqDest.ContainerControl = this;
             // 
             // AddTripForm
             // 
@@ -232,6 +249,8 @@
             this.Text = "Add Trip";
             ((System.ComponentModel.ISupportInitialize)(this.TrainID)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DriverID)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Depature_Arrival)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SrcEqDest)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -253,5 +272,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox SrcStation;
         private System.Windows.Forms.ComboBox DestStation;
+        private System.Windows.Forms.ErrorProvider Depature_Arrival;
+        private System.Windows.Forms.ErrorProvider SrcEqDest;
     }
 }
