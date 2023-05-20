@@ -19,14 +19,72 @@ namespace TrainBooking
 
         private void UpdateTrip_Click(object sender, EventArgs e)
         {
-            int tripID = UpdateTripForm1.instance.tripID;
             int trainID = (int)TrainID.Value;
             int driverID = (int)DriverID.Value;
-            DateTime depatureT = DepatureTime.Value;
+            DateTime departureT = DepartureTime.Value;
             DateTime arrivalT = ArrivalTime.Value;
             string srcName = SrcStation.Text;
             string destName = DestStation.Text;
-        }
 
+            int errFlag = 0;
+
+            if (departureT >= arrivalT)
+            {
+                Depature_Arrival.SetError(DepartureTime, "Depature Date must be lower than Arrival Time");
+                MessageBox.Show("Depature Date must be lower than Arrival Time");
+                ++errFlag;
+            }
+            else
+            {
+                Depature_Arrival.Clear();
+                --errFlag;
+            }
+
+            if (srcName == destName)
+            {
+                SrcEqDest.SetError(SrcStation, "Source Station Cannot be the same as Destination Station");
+                MessageBox.Show("Source Station Cannot be the same as Destination Station");
+                ++errFlag;
+            }
+            else
+            {
+                SrcEqDest.Clear();
+                --errFlag;
+            }
+
+
+            Trip trip = new Trip(departureT, arrivalT);
+            trip.TripID = UpdateTripForm1.tripID;
+
+            if (!trip.setTrainID(trainID))
+            {
+                TrainIDErr.SetError(TrainID, "This TrainID is not Exist, Try Another One.");
+                MessageBox.Show("This TrainID is not Exist, Try Another One.");
+                ++errFlag;
+            }
+            else
+            {
+                TrainIDErr.Clear();
+                --errFlag;
+            }
+
+            if (!trip.setDriverID(driverID))
+            {
+                DriverIDErr.SetError(DriverID, "This DriverID is not Exist, Try Another One.");
+                MessageBox.Show("This DriverID is not Exist, Try Another One.");
+                ++errFlag;
+            }
+            else
+            {
+                DriverIDErr.Clear();
+                --errFlag;
+            }
+
+            if (errFlag == -4)
+            {
+                Admin admin = new Admin();
+                admin.updateTrip(trip, srcName, destName);
+            }
+        }
     }
 }

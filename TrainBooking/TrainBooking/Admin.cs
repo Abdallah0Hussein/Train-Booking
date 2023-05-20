@@ -64,13 +64,27 @@ namespace TrainBooking
                 command = new SqlCommand($"INSERT INTO Station VALUES({tripID}, '{destStation}', '{StationLocations[destStation]}', 'Destination')", connection);
                 command.ExecuteNonQuery();
             }
-            MessageBox.Show($"Trip {tripID} Has been Added to System Successfully :)");
+            MessageBox.Show($"Trip #{tripID} Has been Added to System Successfully :)");
             connection.Close();
             return;
         }
 
-        public void updateTrip(int trainID, int DriverID, string depatureTime, string arrivalTime, string srcStation, string destStation)
+        public void updateTrip(Trip trip, string srcStation, string destStation)
         {
+            DBConnection conn = new DBConnection();
+            SqlConnection connection = conn.ConnectToDatabase();
+
+            SqlCommand command = new SqlCommand($"UPDATE Trip SET TrainID = {trip.TrainID}, DriverID = {trip.DriverID}, DepartureTime = CONVERT(datetime, '{trip.departureT}'),  ArrivalTime = CONVERT(datetime, '{trip.arrivalT}') WHERE TripID = {trip.TripID};", connection);
+            command.ExecuteNonQuery();
+
+            command = new SqlCommand($"UPDATE Station SET name = '{srcStation}', location = '{StationLocations[srcStation]}' WHERE station_Type =  'Source' AND TripID = {trip.TripID}", connection);
+            command.ExecuteNonQuery();
+
+            command = new SqlCommand($"UPDATE Station SET name = '{destStation}', location = '{StationLocations[destStation]}' WHERE station_Type =  'Destination' AND TripID = {trip.TripID}", connection);
+            command.ExecuteNonQuery();
+
+            MessageBox.Show($"Trip #{trip.TripID} Has been Updated Successfully :)");
+            connection.Close();
             return;
         }
     }

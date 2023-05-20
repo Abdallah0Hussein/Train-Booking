@@ -27,24 +27,24 @@ namespace TrainBooking
             string srcName = SrcStation.Text;
             string destName = DestStation.Text;
 
-            bool errFlag = false;
+            int errFlag = 0;
 
             if (departureT >= arrivalT){
                 Depature_Arrival.SetError(DepartureTime, "Depature Date must be lower than Arrival Time");
                 MessageBox.Show("Depature Date must be lower than Arrival Time");
-                errFlag = true;
+                ++errFlag;
             } else {
                 Depature_Arrival.Clear();
-                errFlag = false;
+                --errFlag;
             }
 
             if (srcName == destName) {
                 SrcEqDest.SetError(SrcStation, "Source Station Cannot be the same as Destination Station");
                 MessageBox.Show("Source Station Cannot be the same as Destination Station");
-                errFlag = true;
+                ++errFlag;
             } else {
                 SrcEqDest.Clear();
-                errFlag = false;
+                --errFlag;
             }
             
 
@@ -54,23 +54,23 @@ namespace TrainBooking
             {
                 TrainIDErr.SetError(TrainID, "This TrainID is not Exist, Try Another One.");
                 MessageBox.Show("This TrainID is not Exist, Try Another One.");
-                errFlag = true;
+                ++errFlag;
             } else { 
                 TrainIDErr.Clear();
-                errFlag = false;
+                --errFlag;
             }
 
             if (!trip.setDriverID(driverID))
             {
                 DriverIDErr.SetError(DriverID, "This DriverID is not Exist, Try Another One.");
                 MessageBox.Show("This DriverID is not Exist, Try Another One.");
-                errFlag = true;
+                ++errFlag;
             } else {
                 DriverIDErr.Clear();
-                errFlag = false;
+                --errFlag;
             }
             
-            if (!errFlag)
+            if (errFlag == -4)
             {
                 MessageBox.Show("hey");
                 Admin admin = new Admin();

@@ -12,18 +12,17 @@ namespace TrainBooking
 {
     public partial class UpdateTrainForm1 : Form
     {
-        public static UpdateTrainForm1 instance;
-        public int trainID;
+        public static int trainID = 0;
         public UpdateTrainForm1()
         {
             InitializeComponent();
-            instance = this;
-            trainID = (int) nTrainID.Value;
         }
 
         private void SendTrainID_Click(object sender, EventArgs e)
         {
-           // Want to check if TrainID is actual number && want to check whether its in the database or not
+            trainID = (int) nTrainID.Value;
+
+
             UpdateTrainForm2 form2 = new UpdateTrainForm2();
             form2.ShowDialog();
         }

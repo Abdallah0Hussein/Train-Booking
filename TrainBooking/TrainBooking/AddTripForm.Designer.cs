@@ -59,7 +59,7 @@
             // 
             this.AddTrip.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
             this.AddTrip.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.AddTrip.Location = new System.Drawing.Point(299, 561);
+            this.AddTrip.Location = new System.Drawing.Point(246, 559);
             this.AddTrip.Name = "AddTrip";
             this.AddTrip.Size = new System.Drawing.Size(187, 49);
             this.AddTrip.TabIndex = 24;
@@ -114,19 +114,25 @@
             // 
             // DepartureTime
             // 
+            this.DepartureTime.CalendarTrailingForeColor = System.Drawing.Color.Gray;
+            this.DepartureTime.CustomFormat = "dd / MM / yyyy  hh:mm tt";
             this.DepartureTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.DepartureTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.DepartureTime.Location = new System.Drawing.Point(299, 257);
             this.DepartureTime.Name = "DepartureTime";
-            this.DepartureTime.Size = new System.Drawing.Size(407, 34);
+            this.DepartureTime.Size = new System.Drawing.Size(324, 34);
             this.DepartureTime.TabIndex = 25;
             this.DepartureTime.Value = new System.DateTime(2023, 5, 19, 9, 55, 39, 0);
             // 
             // ArrivalTime
             // 
+            this.ArrivalTime.CalendarFont = new System.Drawing.Font("Microsoft Tai Le", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ArrivalTime.CustomFormat = "dd / MM / yyyy  hh:mm tt";
             this.ArrivalTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.ArrivalTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.ArrivalTime.Location = new System.Drawing.Point(299, 324);
             this.ArrivalTime.Name = "ArrivalTime";
-            this.ArrivalTime.Size = new System.Drawing.Size(407, 34);
+            this.ArrivalTime.Size = new System.Drawing.Size(324, 34);
             this.ArrivalTime.TabIndex = 27;
             this.ArrivalTime.Value = new System.DateTime(2023, 5, 20, 0, 0, 0, 0);
             // 
@@ -157,7 +163,7 @@
             this.TrainID.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.TrainID.Location = new System.Drawing.Point(299, 128);
             this.TrainID.Name = "TrainID";
-            this.TrainID.Size = new System.Drawing.Size(407, 34);
+            this.TrainID.Size = new System.Drawing.Size(324, 34);
             this.TrainID.TabIndex = 32;
             // 
             // DriverID
@@ -165,7 +171,7 @@
             this.DriverID.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.DriverID.Location = new System.Drawing.Point(299, 190);
             this.DriverID.Name = "DriverID";
-            this.DriverID.Size = new System.Drawing.Size(407, 34);
+            this.DriverID.Size = new System.Drawing.Size(324, 34);
             this.DriverID.TabIndex = 33;
             // 
             // label8
@@ -196,7 +202,7 @@
             "Bacchus Station"});
             this.SrcStation.Location = new System.Drawing.Point(299, 392);
             this.SrcStation.Name = "SrcStation";
-            this.SrcStation.Size = new System.Drawing.Size(407, 34);
+            this.SrcStation.Size = new System.Drawing.Size(324, 34);
             this.SrcStation.TabIndex = 38;
             // 
             // DestStation
@@ -216,7 +222,7 @@
             "Bacchus Station"});
             this.DestStation.Location = new System.Drawing.Point(299, 462);
             this.DestStation.Name = "DestStation";
-            this.DestStation.Size = new System.Drawing.Size(407, 34);
+            this.DestStation.Size = new System.Drawing.Size(324, 34);
             this.DestStation.TabIndex = 39;
             // 
             // Depature_Arrival
@@ -240,7 +246,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.ClientSize = new System.Drawing.Size(795, 672);
+            this.ClientSize = new System.Drawing.Size(690, 672);
             this.Controls.Add(this.DestStation);
             this.Controls.Add(this.SrcStation);
             this.Controls.Add(this.label8);
@@ -255,6 +261,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lablel);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "AddTripForm";
             this.Text = "Add Trip";
             ((System.ComponentModel.ISupportInitialize)(this.TrainID)).EndInit();

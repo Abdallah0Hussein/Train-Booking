@@ -11,6 +11,7 @@ namespace TrainBooking
 {
     public class Trip
     {
+        private int tripID = 0;
         private int trainID;
         private int driverID;
         public string departureT;
@@ -18,11 +19,12 @@ namespace TrainBooking
 
         public int TrainID { get => trainID; }
         public int DriverID { get => driverID; }
-
+        public int TripID { get => tripID; set => tripID = value; }
+        
         public Trip(DateTime departureT, DateTime arrivalT)
         {
-            this.departureT = departureT.ToShortDateString() + " " + departureT.ToShortTimeString();
-            this.arrivalT = departureT.ToShortDateString() + " " + departureT.ToShortTimeString();
+            this.departureT = departureT.ToString();
+            this.arrivalT = arrivalT.ToString();
         }
 
         public bool setTrainID(int ID)

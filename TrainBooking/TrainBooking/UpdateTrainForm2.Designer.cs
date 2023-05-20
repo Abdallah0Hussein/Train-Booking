@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label4 = new System.Windows.Forms.Label();
+            this.Title = new System.Windows.Forms.Label();
             this.UpdateTrain = new System.Windows.Forms.Button();
             this.TrainCapacity = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -38,17 +38,18 @@
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // label4
+            // Title
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Tai Le", 22F, System.Drawing.FontStyle.Bold);
-            this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(22, 33);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(277, 48);
-            this.label4.TabIndex = 18;
-            this.label4.Text = "Update a Train";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Title.AutoSize = true;
+            this.Title.Font = new System.Drawing.Font("Microsoft Tai Le", 22F, System.Drawing.FontStyle.Bold);
+            this.Title.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Title.Location = new System.Drawing.Point(22, 33);
+            this.Title.Name = "Title";
+            this.Title.Size = new System.Drawing.Size(277, 48);
+            this.Title.TabIndex = 18;
+            this.Title.Text = "Update Train " + UpdateTrainForm1.trainID.ToString();
+            this.Title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            
             // 
             // UpdateTrain
             // 
@@ -133,7 +134,7 @@
             this.Controls.Add(this.TrainName);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.Title);
             this.Name = "UpdateTrainForm2";
             this.Text = "Update a Train";
             this.ResumeLayout(false);
@@ -142,7 +143,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label Title;
         private System.Windows.Forms.Button UpdateTrain;
         private System.Windows.Forms.TextBox TrainCapacity;
         private System.Windows.Forms.Label label5;
