@@ -1,9 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\TrainBooking",
-    "\\TrainBooking\\TrainBooking"
+    ""
   ],
-  "SelectedNode": "\\TrainBooking\\TrainBooking\\AddTripForm.cs",
+  "SelectedNode": "\\TrainBooking.sln",
   "PreviewInSolutionExplorer": false
 }

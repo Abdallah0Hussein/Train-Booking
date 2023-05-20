@@ -77,10 +77,10 @@ namespace TrainBooking
             SqlCommand command = new SqlCommand($"UPDATE Trip SET TrainID = {trip.TrainID}, DriverID = {trip.DriverID}, DepartureTime = CONVERT(datetime, '{trip.departureT}'),  ArrivalTime = CONVERT(datetime, '{trip.arrivalT}') WHERE TripID = {trip.TripID};", connection);
             command.ExecuteNonQuery();
 
-            command = new SqlCommand($"UPDATE Station SET name = '{srcStation}', location = '{StationLocations[srcStation]}' WHERE station_Type =  'Source' AND TripID = {trip.TripID}", connection);
+            command = new SqlCommand($"UPDATE Station SET Name = '{srcStation}', location = '{StationLocations[srcStation]}' WHERE Station_Type =  'Source' AND TripID = {trip.TripID}", connection);
             command.ExecuteNonQuery();
 
-            command = new SqlCommand($"UPDATE Station SET name = '{destStation}', location = '{StationLocations[destStation]}' WHERE station_Type =  'Destination' AND TripID = {trip.TripID}", connection);
+            command = new SqlCommand($"UPDATE Station SET Name = '{destStation}', location = '{StationLocations[destStation]}' WHERE Station_Type =  'Destination' AND TripID = {trip.TripID}", connection);
             command.ExecuteNonQuery();
 
             MessageBox.Show($"Trip #{trip.TripID} Has been Updated Successfully :)");
