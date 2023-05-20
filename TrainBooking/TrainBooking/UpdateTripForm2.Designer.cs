@@ -57,11 +57,10 @@
             "Van Horn",
             "Saint Denis",
             "Blackwater",
-            "Strawberry",
             "Annesburg",
             "Riggs Station",
             "Emerald Station",
-            "Bacchus Station "});
+            "Bacchus Station"});
             this.DestStation.Location = new System.Drawing.Point(293, 464);
             this.DestStation.Name = "DestStation";
             this.DestStation.Size = new System.Drawing.Size(407, 34);
@@ -78,11 +77,10 @@
             "Van Horn",
             "Saint Denis",
             "Blackwater",
-            "Strawberry",
             "Annesburg",
             "Riggs Station",
             "Emerald Station",
-            "Bacchus Station "});
+            "Bacchus Station"});
             this.SrcStation.Location = new System.Drawing.Point(293, 392);
             this.SrcStation.Name = "SrcStation";
             this.SrcStation.Size = new System.Drawing.Size(407, 34);
