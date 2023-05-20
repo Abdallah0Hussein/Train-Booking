@@ -26,11 +26,13 @@ namespace TrainBooking
             SqlConnection connection = conn.ConnectToDatabase();
 
             Bookingattribuits Bk = new Bookingattribuits();
-            
-            string trainID = TrainID.Text;
+            int TripID = 1;
             string dest = DestStation.Text;
             string source = SrcStation.Text;
-            DateTime dateTime = DateTime.Parse(DepatureTime.Text);
+            DateTime departureTime = DateTime.Parse(DepatureTime.Text);
+            DateTime arrivalTime = DateTime.Parse(ArrivalTime.Text);
+            Bookingattribuits bookingattribuits = new Bookingattribuits();
+            bookingattribuits.Bookingattribuitsreg(connection, TripID, departureTime, arrivalTime);
         }
     }
 }
