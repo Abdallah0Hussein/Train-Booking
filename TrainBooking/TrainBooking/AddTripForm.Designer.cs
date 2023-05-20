@@ -45,10 +45,14 @@
             this.DestStation = new System.Windows.Forms.ComboBox();
             this.Depature_Arrival = new System.Windows.Forms.ErrorProvider(this.components);
             this.SrcEqDest = new System.Windows.Forms.ErrorProvider(this.components);
+            this.TrainIDErr = new System.Windows.Forms.ErrorProvider(this.components);
+            this.DriverIDErr = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.TrainID)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DriverID)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Depature_Arrival)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SrcEqDest)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TrainIDErr)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DriverIDErr)).BeginInit();
             this.SuspendLayout();
             // 
             // AddTrip
@@ -225,6 +229,14 @@
             // 
             this.SrcEqDest.ContainerControl = this;
             // 
+            // TrainIDErr
+            // 
+            this.TrainIDErr.ContainerControl = this;
+            // 
+            // DriverIDErr
+            // 
+            this.DriverIDErr.ContainerControl = this;
+            // 
             // AddTripForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -251,6 +263,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.DriverID)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Depature_Arrival)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SrcEqDest)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TrainIDErr)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DriverIDErr)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -274,5 +288,7 @@
         private System.Windows.Forms.ComboBox DestStation;
         private System.Windows.Forms.ErrorProvider Depature_Arrival;
         private System.Windows.Forms.ErrorProvider SrcEqDest;
+        private System.Windows.Forms.ErrorProvider TrainIDErr;
+        private System.Windows.Forms.ErrorProvider DriverIDErr;
     }
 }

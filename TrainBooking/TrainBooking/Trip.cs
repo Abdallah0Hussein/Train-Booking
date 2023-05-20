@@ -40,7 +40,7 @@ namespace TrainBooking
         {
             DBConnection conn = new DBConnection();
             SqlConnection connection = conn.ConnectToDatabase();
-            SqlCommand command = new SqlCommand($"SELECT Count(DriverID) FROM Train WHERE DriverID = {ID}", connection);
+            SqlCommand command = new SqlCommand($"SELECT Count(DriverID) FROM Driver WHERE DriverID = {ID}", connection);
 
             int isExist = (int)command.ExecuteScalar();
             driverID = ID;

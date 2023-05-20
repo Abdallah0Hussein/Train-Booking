@@ -27,37 +27,55 @@ namespace TrainBooking
             string srcName = SrcStation.Text;
             string destName = DestStation.Text;
 
+            bool errFlag = false;
+
             if (depatureT >= arrivalT){
                 Depature_Arrival.SetError(DepatureTime, "Depature Date must be lower than Arrival Time");
                 MessageBox.Show("Depature Date must be lower than Arrival Time");
-            } else{
+                errFlag = true;
+            } else {
                 Depature_Arrival.Clear();
+                errFlag = false;
             }
 
             if (srcName == destName) {
                 SrcEqDest.SetError(SrcStation, "Source Station Cannot be the same as Destination Station");
                 MessageBox.Show("Source Station Cannot be the same as Destination Station");
+                errFlag = true;
             } else {
                 SrcEqDest.Clear();
+                errFlag = false;
             }
             
 
             Trip trip = new Trip(depatureT, arrivalT);
-            if (!trip.setDriverID(driverID))
-            {
-
-            } else { 
-
-            }
 
             if (!trip.setTrainID(trainID))
             {
-
+                TrainIDErr.SetError(TrainID, "This TrainID is not Exist, Try Another One.");
+                MessageBox.Show("This TrainID is not Exist, Try Another One.");
+                errFlag = true;
             } else { 
-
+                TrainIDErr.Clear();
+                errFlag = false;
             }
 
-            Admin admin = new Admin();
+            if (!trip.setDriverID(driverID))
+            {
+                DriverIDErr.SetError(DriverID, "This DriverID is not Exist, Try Another One.");
+                MessageBox.Show("This DriverID is not Exist, Try Another One.");
+                errFlag = true;
+            } else {
+                DriverIDErr.Clear();
+                errFlag = false;
+            }
+            
+            if (!errFlag)
+            {
+                MessageBox.Show("hey");
+                Admin admin = new Admin();
+                admin.addTrip(trip, srcName, destName);
+            }
         }
     }
 }
