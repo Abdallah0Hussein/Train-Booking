@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.Common;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -39,13 +40,32 @@ namespace TrainBooking
 
         public void addTrip(Trip trip, string srcStation, string destStation)
         {
-            /*
             DBConnection conn = new DBConnection();
             SqlConnection connection = conn.ConnectToDatabase();
-            SqlCommand command = new SqlCommand($"INSERT INTO Trip (TrainID, DriverID, NumberOfPassengers, DepatureTime, ArrivalTime) VALUES ({trip.TrainID}, {trip.DriverID}, 75, CONVERT(datetime, '{trip.depatureT}'), CONVERT(datetime, '{trip.arrivalT}')", connection);
+
+            SqlCommand command = new SqlCommand($"INSERT INTO Trip (TrainID, DriverID, DepartureTime, ArrivalTime) VALUES ({trip.TrainID}, {trip.DriverID}, CONVERT(datetime, '{trip.departureT}'), CONVERT(datetime, '{trip.arrivalT}'));", connection);
             command.ExecuteNonQuery();
-            */
-            
+
+            command = new SqlCommand($"SELECT MAX(TripID) FROM Trip;", connection);
+            SqlDataReader TripIDReader = command.ExecuteReader();
+            int tripID = 0;
+            if (TripIDReader.HasRows)
+            {
+                // read the first (and only) row of the result set
+                TripIDReader.Read();
+
+                // get the value of the first (and only) column
+                tripID = TripIDReader.GetInt32(0);
+                TripIDReader.Close();
+
+                command = new SqlCommand($"INSERT INTO Station VALUES({tripID}, '{srcStation}', '{StationLocations[srcStation]}', 'Source')", connection);
+                command.ExecuteNonQuery();
+
+                command = new SqlCommand($"INSERT INTO Station VALUES({tripID}, '{destStation}', '{StationLocations[destStation]}', 'Destination')", connection);
+                command.ExecuteNonQuery();
+            }
+            MessageBox.Show($"Trip {tripID} Has been Added to System Successfully :)");
+            connection.Close();
             return;
         }
 

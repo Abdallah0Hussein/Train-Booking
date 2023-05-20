@@ -34,7 +34,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.lablel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.DepatureTime = new System.Windows.Forms.DateTimePicker();
+            this.DepartureTime = new System.Windows.Forms.DateTimePicker();
             this.ArrivalTime = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -112,14 +112,14 @@
             this.label1.Text = "Add a Trip";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // DepatureTime
+            // DepartureTime
             // 
-            this.DepatureTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.DepatureTime.Location = new System.Drawing.Point(299, 257);
-            this.DepatureTime.Name = "DepatureTime";
-            this.DepatureTime.Size = new System.Drawing.Size(407, 34);
-            this.DepatureTime.TabIndex = 25;
-            this.DepatureTime.Value = new System.DateTime(2023, 5, 19, 9, 55, 39, 0);
+            this.DepartureTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.DepartureTime.Location = new System.Drawing.Point(299, 257);
+            this.DepartureTime.Name = "DepartureTime";
+            this.DepartureTime.Size = new System.Drawing.Size(407, 34);
+            this.DepartureTime.TabIndex = 25;
+            this.DepartureTime.Value = new System.DateTime(2023, 5, 19, 9, 55, 39, 0);
             // 
             // ArrivalTime
             // 
@@ -190,11 +190,10 @@
             "Van Horn",
             "Saint Denis",
             "Blackwater",
-            "Strawberry",
             "Annesburg",
             "Riggs Station",
             "Emerald Station",
-            "Bacchus Station "});
+            "Bacchus Station"});
             this.SrcStation.Location = new System.Drawing.Point(299, 392);
             this.SrcStation.Name = "SrcStation";
             this.SrcStation.Size = new System.Drawing.Size(407, 34);
@@ -211,11 +210,10 @@
             "Van Horn",
             "Saint Denis",
             "Blackwater",
-            "Strawberry",
             "Annesburg",
             "Riggs Station",
             "Emerald Station",
-            "Bacchus Station "});
+            "Bacchus Station"});
             this.DestStation.Location = new System.Drawing.Point(299, 462);
             this.DestStation.Name = "DestStation";
             this.DestStation.Size = new System.Drawing.Size(407, 34);
@@ -251,7 +249,7 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.ArrivalTime);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.DepatureTime);
+            this.Controls.Add(this.DepartureTime);
             this.Controls.Add(this.AddTrip);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -277,7 +275,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lablel;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker DepatureTime;
+        private System.Windows.Forms.DateTimePicker DepartureTime;
         private System.Windows.Forms.DateTimePicker ArrivalTime;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;

@@ -13,16 +13,16 @@ namespace TrainBooking
     {
         private int trainID;
         private int driverID;
-        public string depatureT;
+        public string departureT;
         public string arrivalT;
 
         public int TrainID { get => trainID; }
         public int DriverID { get => driverID; }
 
-        public Trip(DateTime depatureT, DateTime arrivalT)
+        public Trip(DateTime departureT, DateTime arrivalT)
         {
-            this.depatureT = depatureT.ToShortDateString() + " " + depatureT.ToShortTimeString();
-            this.arrivalT = depatureT.ToShortDateString() + " " + depatureT.ToShortTimeString();
+            this.departureT = departureT.ToShortDateString() + " " + departureT.ToShortTimeString();
+            this.arrivalT = departureT.ToShortDateString() + " " + departureT.ToShortTimeString();
         }
 
         public bool setTrainID(int ID)

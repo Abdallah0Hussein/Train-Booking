@@ -22,15 +22,15 @@ namespace TrainBooking
         {
             int trainID = (int)TrainID.Value;
             int driverID = (int)DriverID.Value;
-            DateTime depatureT = DepatureTime.Value;
+            DateTime departureT = DepartureTime.Value;
             DateTime arrivalT = ArrivalTime.Value;
             string srcName = SrcStation.Text;
             string destName = DestStation.Text;
 
             bool errFlag = false;
 
-            if (depatureT >= arrivalT){
-                Depature_Arrival.SetError(DepatureTime, "Depature Date must be lower than Arrival Time");
+            if (departureT >= arrivalT){
+                Depature_Arrival.SetError(DepartureTime, "Depature Date must be lower than Arrival Time");
                 MessageBox.Show("Depature Date must be lower than Arrival Time");
                 errFlag = true;
             } else {
@@ -48,7 +48,7 @@ namespace TrainBooking
             }
             
 
-            Trip trip = new Trip(depatureT, arrivalT);
+            Trip trip = new Trip(departureT, arrivalT);
 
             if (!trip.setTrainID(trainID))
             {
