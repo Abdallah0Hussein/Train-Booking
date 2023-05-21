@@ -23,8 +23,8 @@ namespace TrainBooking
         
         public Trip(DateTime departureT, DateTime arrivalT)
         {
-            this.departureT = departureT.ToString();
-            this.arrivalT = arrivalT.ToString();
+            this.departureT = departureT.ToShortDateString() + " " + departureT.ToShortTimeString();
+            this.arrivalT = arrivalT.ToShortDateString() + " " + arrivalT.ToShortTimeString();
         }
 
         public bool setTrainID(int ID)
