@@ -17,7 +17,7 @@ namespace TrainBooking
         }
         public void BookingTypeTicket(SqlConnection connection, int PassngerID, int TripID, int seatNumber, string TypeTicket, decimal price)
         {
-            SqlCommand command = new SqlCommand("INSERT INTO [Ticket] (PassngerID, TripID, seatNumber ,ticketType, price) VALUES ('" + PassngerID + "','" + TripID + "','" + seatNumber + "','" + TypeTicket + "','" + price + "')", connection);
+            SqlCommand command = new SqlCommand("INSERT INTO [Ticket] (PassengerID, TripID, seatNumber ,ticketType, price) VALUES ('" + PassngerID + "','" + TripID + "','" + seatNumber + "','" + TypeTicket + "','" + price + "')", connection);
             command.ExecuteNonQuery();
         }
     }
