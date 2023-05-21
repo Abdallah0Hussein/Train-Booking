@@ -29,7 +29,7 @@ namespace TrainBooking
             {"Bacchus Station",  "Cumberland Forest"}
         };
 
-        public void addTrain(string trainName, string trainStatus, int capacity)
+      public void addTrain(string trainName, string trainStatus, int capacity)
         {
             DBConnection conn = new DBConnection();
             SqlConnection connection = conn.ConnectToDatabase();
@@ -44,7 +44,7 @@ namespace TrainBooking
             return;
         }
 
-        public void updateTrain(int trainID, string name, string status, int capacity)
+      public void updateTrain(int trainID , string name, string status, int capacity)
         {
             DBConnection conn = new DBConnection();
             SqlConnection connection = conn.ConnectToDatabase();
@@ -55,11 +55,6 @@ namespace TrainBooking
             MessageBox.Show($"Train #{trainID} Has been Updated Successfully :)");
             connection.Close();
             return;
-<<<<<<< Updated upstream
-=======
-           
-
->>>>>>> Stashed changes
 
         }
 

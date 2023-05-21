@@ -7,17 +7,12 @@ namespace TrainBooking
 {
     public class Train
     {
-<<<<<<< Updated upstream
-        public int TrainID;
-        public string TrainName;
-        public string TrainStatus;
-        public int Capacity;
-=======
+
         private int TrainID;
         private string TrainName;
         private string TrainStatus;
         private int Capacity;
->>>>>>> Stashed changes
+
 
         public Train(int trainID, string trainName, string trainStatus, int capacity)
         {
@@ -28,10 +23,7 @@ namespace TrainBooking
         }
 
     }
-<<<<<<< Updated upstream
-}
-=======
 
 }
 
->>>>>>> Stashed changes
+
