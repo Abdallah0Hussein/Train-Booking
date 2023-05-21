@@ -6,10 +6,10 @@ namespace TrainBooking
 {
     public class Train
     {
-        public int TrainID { get; private set; }
-        public string TrainName { get; set; }
-        public string TrainStatus { get; set; }
-        public int Capacity { get; set; }
+        public int TrainID;
+        public string TrainName;
+        public string TrainStatus;
+        public int Capacity;
 
         public Train(int trainID, string trainName, string trainStatus, int capacity)
         {
@@ -18,6 +18,6 @@ namespace TrainBooking
             TrainStatus = trainStatus;
             Capacity = capacity;
         }
-       
-        }
+
+    }
 }

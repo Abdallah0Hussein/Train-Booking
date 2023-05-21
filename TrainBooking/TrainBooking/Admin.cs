@@ -33,18 +33,29 @@ namespace TrainBooking
         {
             DBConnection conn = new DBConnection();
             SqlConnection connection = conn.ConnectToDatabase();
-       
-           
-            SqlCommand command = new SqlCommand($"INSERT INTO Train (Name, Status, Capacity) VALUES ('{trainName}', '{trainStatus}', {capacity});", connection);
+            SqlCommand command1 = new SqlCommand($"SELECT MAX(TrainID) FROM Train;", connection);
+            int id = (int)command1.ExecuteScalar();
+            id += 1;
+
+            SqlCommand command = new SqlCommand($"INSERT INTO Train (TrainID,Name, Status, Capacity) VALUES ('{id}','{trainName}', '{trainStatus}', {capacity});", connection);
             command.ExecuteNonQuery();
             MessageBox.Show("Train added successfully.");
             connection.Close();
             return;
         }
 
-        public void updateTrain(int trainID , string name, string status, int capacity)
+        public void updateTrain(int trainID, string name, string status, int capacity)
         {
+            DBConnection conn = new DBConnection();
+            SqlConnection connection = conn.ConnectToDatabase();
+            string updateQuery = $"UPDATE Train SET Name = '{name}', Status = '{status}', Capacity = {capacity} WHERE TrainID = {trainID}";
+            SqlCommand command = new SqlCommand(updateQuery, connection);
+
+            command.ExecuteNonQuery();
+            MessageBox.Show($"Train #{trainID} Has been Updated Successfully :)");
+            connection.Close();
             return;
+
         }
 
         public void addTrip(Trip trip, string srcStation, string destStation)
