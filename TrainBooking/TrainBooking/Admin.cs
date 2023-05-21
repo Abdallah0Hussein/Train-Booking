@@ -17,6 +17,7 @@ namespace TrainBooking
     {
         private static Dictionary<string, string> StationLocations = new Dictionary<string, string>()
         {
+            // Dictionary for Station : location Names
             {"Valentine",  "The Heartlands"},
             {"Rhodes",  "Scarlett Meadows"},
             {"Blackwater",  "Great Plains"},
@@ -33,7 +34,7 @@ namespace TrainBooking
             DBConnection conn = new DBConnection();
             SqlConnection connection = conn.ConnectToDatabase();
        
-
+           
             SqlCommand command = new SqlCommand($"INSERT INTO Train (Name, Status, Capacity) VALUES ('{trainName}', '{trainStatus}', {capacity});", connection);
             command.ExecuteNonQuery();
             MessageBox.Show("Train added successfully.");
@@ -51,25 +52,30 @@ namespace TrainBooking
             DBConnection conn = new DBConnection();
             SqlConnection connection = conn.ConnectToDatabase();
           
-
+            // Insert Trip Data to DB
             SqlCommand command = new SqlCommand($"INSERT INTO Trip (TrainID, DriverID, DepartureTime, ArrivalTime) VALUES ({trip.TrainID}, {trip.DriverID}, CONVERT(datetime, '{trip.departureT}'), CONVERT(datetime, '{trip.arrivalT}'));", connection);
             command.ExecuteNonQuery();
 
+            // Getting the TripID By getting the biggest ID(the ID that Just added to the table) in Trip Table
             command = new SqlCommand($"SELECT MAX(TripID) FROM Trip;", connection);
             SqlDataReader TripIDReader = command.ExecuteReader();
+
             int tripID = 0;
             if (TripIDReader.HasRows)
             {
-                // read the first (and only) row of the result set
+                // Read the first (and only) row of the result set (TripID)
                 TripIDReader.Read();
 
-                // get the value of the first (and only) column
+                // Get the value of the first (and only) column (TripID)
                 tripID = TripIDReader.GetInt32(0);
+
                 TripIDReader.Close();
 
+                // Storing Source Station Data in DB
                 command = new SqlCommand($"INSERT INTO Station VALUES({tripID}, '{srcStation}', '{StationLocations[srcStation]}', 'Source')", connection);
                 command.ExecuteNonQuery();
 
+                // Storing Destination Station Data in DB
                 command = new SqlCommand($"INSERT INTO Station VALUES({tripID}, '{destStation}', '{StationLocations[destStation]}', 'Destination')", connection);
                 command.ExecuteNonQuery();
             }
@@ -83,12 +89,15 @@ namespace TrainBooking
             DBConnection conn = new DBConnection();
             SqlConnection connection = conn.ConnectToDatabase();
 
+            // Updating Trip Data in DB
             SqlCommand command = new SqlCommand($"UPDATE Trip SET TrainID = {trip.TrainID}, DriverID = {trip.DriverID}, DepartureTime = CONVERT(datetime, '{trip.departureT}'),  ArrivalTime = CONVERT(datetime, '{trip.arrivalT}') WHERE TripID = {trip.TripID};", connection);
             command.ExecuteNonQuery();
 
+            // Updating Source Station Data in DB
             command = new SqlCommand($"UPDATE Station SET Name = '{srcStation}', location = '{StationLocations[srcStation]}' WHERE Station_Type =  'Source' AND TripID = {trip.TripID}", connection);
             command.ExecuteNonQuery();
 
+            // Updating Destination Station Data in DB
             command = new SqlCommand($"UPDATE Station SET Name = '{destStation}', location = '{StationLocations[destStation]}' WHERE Station_Type =  'Destination' AND TripID = {trip.TripID}", connection);
             command.ExecuteNonQuery();
 

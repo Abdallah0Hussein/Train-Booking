@@ -23,6 +23,7 @@ namespace TrainBooking
         
         public Trip(DateTime departureT, DateTime arrivalT)
         {
+            // Storing Departure & Arrival (Date & Time) into a string 
             this.departureT = departureT.ToShortDateString() + " " + departureT.ToShortTimeString();
             this.arrivalT = arrivalT.ToShortDateString() + " " + arrivalT.ToShortTimeString();
         }
@@ -31,10 +32,13 @@ namespace TrainBooking
         {
             DBConnection conn = new DBConnection();
             SqlConnection connection = conn.ConnectToDatabase();
+            // Validate that TrainID entered by Admin is Exist
             SqlCommand command = new SqlCommand($"SELECT Count(TrainID) FROM Train WHERE TrainID = {ID}", connection);
-
             int isExist = (int)command.ExecuteScalar();
+
+            // Setting the trainID
             trainID = ID;
+
             return isExist == 1;
         }
 
@@ -42,10 +46,14 @@ namespace TrainBooking
         {
             DBConnection conn = new DBConnection();
             SqlConnection connection = conn.ConnectToDatabase();
-            SqlCommand command = new SqlCommand($"SELECT Count(DriverID) FROM Driver WHERE DriverID = {ID}", connection);
 
-            int isExist = (int)command.ExecuteScalar();
+            // Validate that DriverID entered by Admin is Exist
+            SqlCommand command = new SqlCommand($"SELECT Count(DriverID) FROM Driver WHERE DriverID = {ID}", connection);
+             int isExist = (int)command.ExecuteScalar();
+
+            // Setting the DriverID
             driverID = ID;
+
             return isExist == 1;
         }
     }

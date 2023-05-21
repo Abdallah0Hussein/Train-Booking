@@ -72,7 +72,6 @@ namespace TrainBooking
             
             if (errFlag == -4)
             {
-                MessageBox.Show("hey");
                 Admin admin = new Admin();
                 admin.addTrip(trip, srcName, destName);
             }
