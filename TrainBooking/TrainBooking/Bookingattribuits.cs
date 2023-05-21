@@ -9,9 +9,9 @@ namespace TrainBooking
 {
     internal class Bookingattribuits
     {
-        public void Bookingattribuitsreg(SqlConnection connection, int TripID, DateTime DepartureTime, DateTime ArrivalTime)
+        public void Bookingattribuitsreg(SqlConnection connection, int PassengerID, int TicketNumber, DateTime DepartureTime)
         {
-            SqlCommand command = new SqlCommand("INSERT INTO [Trip] ( DepartureTime, ArrivalTime) VALUES ('" + DepartureTime + "', '" + ArrivalTime + "')", connection);
+            SqlCommand command = new SqlCommand("INSERT INTO [Booking] ( PassengerID, TicketNumber, BookingDate) VALUES ('" + PassengerID + "', '" + TicketNumber + "','" + DepartureTime.ToShortDateString() + "')", connection);
             command.ExecuteNonQuery();
         }
     }

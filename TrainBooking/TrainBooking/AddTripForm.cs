@@ -76,5 +76,10 @@ namespace TrainBooking
                 admin.addTrip(trip, srcName, destName);
             }
         }
+
+        private void AddTripForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

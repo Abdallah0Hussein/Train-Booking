@@ -264,6 +264,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "AddTripForm";
             this.Text = "Add Trip";
+            this.Load += new System.EventHandler(this.AddTripForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.TrainID)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DriverID)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Depature_Arrival)).EndInit();
