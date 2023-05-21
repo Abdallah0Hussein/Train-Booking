@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using System.Xml.Linq;
 using System.Security.Cryptography;
+using System.Diagnostics;
 
 namespace TrainBooking
 {
@@ -55,7 +56,9 @@ namespace TrainBooking
                 dgv1.Rows[dgv1.Rows.Count - 1].Cells["Destination"].Value = row["Name"];
             }
 
-
+            int TicketNum = Customer.cus.CustomerID;
+            TicketID.Text = TicketNum.ToString();
+            TicketID.Enabled = false;
 
             connection.Close();
         }
@@ -70,18 +73,30 @@ namespace TrainBooking
 
             Bookingattribuits Bk = new Bookingattribuits();
             DateTime departureTime = DepatureTime.Value;
-            int passenger = 1;
+            int PassengerID = Customer.cus.CustomerID;
             int TicketNumber = 2;
-            int BookingID = 1;
             Bookingattribuits bookingattribuits = new Bookingattribuits();
-            bookingattribuits.Bookingattribuitsreg(connection, passenger, TicketNumber, departureTime);
+            bookingattribuits.Bookingattribuitsreg(connection, PassengerID, TicketNumber, departureTime);
+
+
+            
 
             string Type = TicketType.Text;
-            Bk.BookingTypeTicket(connection, Type);
+            if (Type == "VIP Ticket")
+            {
+                decimal price = 520;
+                int TripID = 1;
+                int seatNumber = 1;
+                Bk.BookingTypeTicket(connection, PassengerID, TripID, seatNumber, Type, price);
+            }
+            else if (Type == "Econmic Ticket")
+            {
+                int TripID = 1;
+                int seatNumber = 1;
+                decimal price = 260;
+                Bk.BookingTypeTicket(connection, PassengerID, TripID, seatNumber, Type, price);
+            }
 
-            int TicketNum = Customer.cus.CustomerID;
-            TicketID.Text = TicketNum.ToString();
-            TicketID.Enabled = false;
         }
         }
     }
