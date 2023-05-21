@@ -14,5 +14,10 @@ namespace TrainBooking
             SqlCommand command = new SqlCommand("INSERT INTO [Booking] ( PassengerID, TicketNumber, BookingDate) VALUES ('" + PassengerID + "', '" + TicketNumber + "','" + DepartureTime.ToShortDateString() + "')", connection);
             command.ExecuteNonQuery();
         }
+        public void BookingTypeTicket(SqlConnection connection, string TypeTicket)
+        {
+            SqlCommand command = new SqlCommand("INSERT INTO [Ticket] (ticketType) VALUES ('" + TypeTicket + "')", connection);
+            command.ExecuteNonQuery();
+        }
     }
 }

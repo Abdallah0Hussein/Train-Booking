@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using System.Xml.Linq;
+using System.Security.Cryptography;
 
 namespace TrainBooking
 {
@@ -26,7 +27,7 @@ namespace TrainBooking
             SqlConnection connection = conn.ConnectToDatabase();
 
             // Retrieve the desired attributes from the Station table for "Source" column
-            string sourceQuery = "SELECT Name FROM Station WHERE Station_Type ike 'Source'";
+            string sourceQuery = "SELECT Name FROM Station WHERE Station_Type like 'Source'";
 
             // Retrieve the desired attributes from the Station table for "Destination" column
             string destinationQuery = "SELECT Name FROM Station WHERE Station_Type like 'Destination'";
@@ -68,19 +69,20 @@ namespace TrainBooking
             SqlConnection connection = conn.ConnectToDatabase();
 
             Bookingattribuits Bk = new Bookingattribuits();
-            int TripID = 1;
-            string dest = DestStation.Text;
-            string source = SrcStation.Text;
             DateTime departureTime = DateTime.Parse(DepatureTime.Text);
-            DateTime arrivalTime = DateTime.Parse(ArrivalTime.Text);
             int passenger = 1;
             int TicketNumber = 2;
             int BookingID = 1;
             Bookingattribuits bookingattribuits = new Bookingattribuits();
             bookingattribuits.Bookingattribuitsreg(connection, passenger, TicketNumber, departureTime);
-        }
 
-       
+            string Type = TicketType.Text;
+            Bk.BookingTypeTicket(connection, Type);
+
+            int TicketNum = Customer.cus.CustomerID;
+            TicketID.Text = TicketNum.ToString();
+            TicketID.Enabled = false;
+        }
         }
     }
 

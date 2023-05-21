@@ -42,7 +42,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.Ticket = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.TicketID = new System.Windows.Forms.ComboBox();
             this.trainBookingDataSet = new TrainBooking.TrainBookingDataSet();
             this.trainBookingDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dgv1 = new System.Windows.Forms.DataGridView();
@@ -53,6 +52,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.TicketID = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.trainBookingDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trainBookingDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv1)).BeginInit();
@@ -220,25 +220,6 @@
             this.label2.TabIndex = 73;
             this.label2.Text = "TicketID";
             // 
-            // TicketID
-            // 
-            this.TicketID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.TicketID.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.5F);
-            this.TicketID.FormattingEnabled = true;
-            this.TicketID.Items.AddRange(new object[] {
-            "Rhodes",
-            "Valentine",
-            "Van Horn",
-            "Saint Denis",
-            "Black Water",
-            "Strawberry",
-            "Annesburg",
-            "Riggs Station"});
-            this.TicketID.Location = new System.Drawing.Point(309, 456);
-            this.TicketID.Name = "TicketID";
-            this.TicketID.Size = new System.Drawing.Size(407, 34);
-            this.TicketID.TabIndex = 74;
-            // 
             // trainBookingDataSet
             // 
             this.trainBookingDataSet.DataSetName = "TrainBookingDataSet";
@@ -319,7 +300,7 @@
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(52, 29);
             this.label10.TabIndex = 81;
-            this.label10.Text = "520";
+            this.label10.Text = "260";
             // 
             // label11
             // 
@@ -333,19 +314,27 @@
             this.label11.TabIndex = 80;
             this.label11.Text = "Econmic";
             // 
+            // TicketID
+            // 
+            this.TicketID.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.TicketID.Location = new System.Drawing.Point(297, 456);
+            this.TicketID.Name = "TicketID";
+            this.TicketID.Size = new System.Drawing.Size(419, 34);
+            this.TicketID.TabIndex = 82;
+            // 
             // BookingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.ClientSize = new System.Drawing.Size(1098, 616);
+            this.Controls.Add(this.TicketID);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dgv1);
-            this.Controls.Add(this.TicketID);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.TicketType);
             this.Controls.Add(this.label1);
@@ -384,7 +373,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label Ticket;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox TicketID;
         private System.Windows.Forms.BindingSource trainBookingDataSetBindingSource;
         private TrainBookingDataSet trainBookingDataSet;
         private System.Windows.Forms.DataGridView dgv1;
@@ -395,5 +383,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox TicketID;
     }
 }
