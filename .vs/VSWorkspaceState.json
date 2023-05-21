@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\TrainBooking",
+    "\\TrainBooking\\TrainBooking"
   ],
-  "SelectedNode": "\\TrainBooking.sln",
+  "SelectedNode": "\\TrainBooking\\TrainBooking\\Train.cs",
   "PreviewInSolutionExplorer": false
 }

@@ -11,7 +11,7 @@ namespace TrainBooking
     {
         public void Bookingattribuitsreg(SqlConnection connection, int PassengerID, int TicketNumber, DateTime DepartureTime)
         {
-            SqlCommand command = new SqlCommand("INSERT INTO [Booking] ( PassengerID, TicketNumber, BookingDate) VALUES ('" + PassengerID + "', '" + TicketNumber + "','" + DepartureTime.ToShortDateString() + "')", connection);
+            SqlCommand command = new SqlCommand($"INSERT INTO [Booking] (PassengerID, TicketNumber, BookingDate) VALUES ({PassengerID}, {TicketNumber}, Convert(DateTime, '{DepartureTime.ToShortDateString() + " " + DepartureTime.ToShortTimeString()}'));", connection);
             command.ExecuteNonQuery();
         }
         public void BookingTypeTicket(SqlConnection connection, string TypeTicket)
