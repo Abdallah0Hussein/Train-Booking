@@ -69,7 +69,7 @@ namespace TrainBooking
             SqlConnection connection = conn.ConnectToDatabase();
 
             Bookingattribuits Bk = new Bookingattribuits();
-            DateTime departureTime = DateTime.Parse(DepatureTime.Text);
+            DateTime departureTime = DepatureTime.Value;
             int passenger = 1;
             int TicketNumber = 2;
             int BookingID = 1;
