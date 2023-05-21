@@ -28,9 +28,21 @@ namespace TrainBooking
             {"Bacchus Station",  "Cumberland Forest"}
         };
 
-        public void addTrain(string name, string status, int capacity)
+        public void addTrain(string trainName, string trainStatus, int capacity)
         {
-            return;
+            DBConnection conn = new DBConnection();
+            using (SqlConnection connection = conn.ConnectToDatabase())
+            {
+                string query = "INSERT INTO Train (Name, Status, Capacity) VALUES (@TrainName, @TrainStatus, @Capacity);";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@TrainName", trainName);
+                    command.Parameters.AddWithValue("@TrainStatus", trainStatus);
+                    command.Parameters.AddWithValue("@Capacity", capacity);
+                    command.ExecuteNonQuery();
+                }
+            }
+            MessageBox.Show("Train added successfully.");
         }
 
         public void updateTrain(int trainID , string name, string status, int capacity)
@@ -42,6 +54,7 @@ namespace TrainBooking
         {
             DBConnection conn = new DBConnection();
             SqlConnection connection = conn.ConnectToDatabase();
+          
 
             SqlCommand command = new SqlCommand($"INSERT INTO Trip (TrainID, DriverID, DepartureTime, ArrivalTime) VALUES ({trip.TrainID}, {trip.DriverID}, CONVERT(datetime, '{trip.departureT}'), CONVERT(datetime, '{trip.arrivalT}'));", connection);
             command.ExecuteNonQuery();
@@ -87,5 +100,6 @@ namespace TrainBooking
             connection.Close();
             return;
         }
+      
     }
 }
