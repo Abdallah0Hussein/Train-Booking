@@ -38,7 +38,6 @@
             this.DepatureTime = new System.Windows.Forms.DateTimePicker();
             this.UpdateTrip = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.TicketPrice = new System.Windows.Forms.ComboBox();
             this.TicketType = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.Ticket = new System.Windows.Forms.Label();
@@ -47,9 +46,13 @@
             this.trainBookingDataSet = new TrainBooking.TrainBookingDataSet();
             this.trainBookingDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dgv1 = new System.Windows.Forms.DataGridView();
-            this.label3 = new System.Windows.Forms.Label();
             this.Source = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Destination = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.trainBookingDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trainBookingDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv1)).BeginInit();
@@ -69,7 +72,7 @@
             "Strawberry",
             "Annesburg",
             "Riggs Station"});
-            this.DestStation.Location = new System.Drawing.Point(309, 239);
+            this.DestStation.Location = new System.Drawing.Point(309, 235);
             this.DestStation.Name = "DestStation";
             this.DestStation.Size = new System.Drawing.Size(407, 34);
             this.DestStation.TabIndex = 68;
@@ -98,7 +101,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.label8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label8.Location = new System.Drawing.Point(74, 240);
+            this.label8.Location = new System.Drawing.Point(74, 235);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(213, 29);
             this.label8.TabIndex = 66;
@@ -171,40 +174,15 @@
             this.label4.TabIndex = 59;
             this.label4.Text = "Depature Time";
             // 
-            // TicketPrice
-            // 
-            this.TicketPrice.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.TicketPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.5F);
-            this.TicketPrice.FormattingEnabled = true;
-            this.TicketPrice.Items.AddRange(new object[] {
-            "Rhodes",
-            "Valentine",
-            "Van Horn",
-            "Saint Denis",
-            "Black Water",
-            "Strawberry",
-            "Annesburg",
-            "Riggs Station"});
-            this.TicketPrice.Location = new System.Drawing.Point(309, 393);
-            this.TicketPrice.Name = "TicketPrice";
-            this.TicketPrice.Size = new System.Drawing.Size(407, 34);
-            this.TicketPrice.TabIndex = 72;
-            // 
             // TicketType
             // 
             this.TicketType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.TicketType.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.5F);
             this.TicketType.FormattingEnabled = true;
             this.TicketType.Items.AddRange(new object[] {
-            "Rhodes",
-            "Valentine",
-            "Van Horn",
-            "Saint Denis",
-            "Black Water",
-            "Strawberry",
-            "Annesburg",
-            "Riggs Station"});
-            this.TicketType.Location = new System.Drawing.Point(309, 325);
+            "VIP Ticket",
+            "Econmic Ticket"});
+            this.TicketType.Location = new System.Drawing.Point(309, 302);
             this.TicketType.Name = "TicketType";
             this.TicketType.Size = new System.Drawing.Size(407, 34);
             this.TicketType.TabIndex = 71;
@@ -214,7 +192,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(74, 393);
+            this.label1.Location = new System.Drawing.Point(76, 374);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(141, 29);
             this.label1.TabIndex = 70;
@@ -225,7 +203,7 @@
             this.Ticket.AutoSize = true;
             this.Ticket.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.Ticket.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Ticket.Location = new System.Drawing.Point(74, 326);
+            this.Ticket.Location = new System.Drawing.Point(74, 302);
             this.Ticket.Name = "Ticket";
             this.Ticket.Size = new System.Drawing.Size(140, 29);
             this.Ticket.TabIndex = 69;
@@ -284,17 +262,6 @@
             this.dgv1.Size = new System.Drawing.Size(337, 502);
             this.dgv1.TabIndex = 76;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(839, 29);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(160, 29);
-            this.label3.TabIndex = 77;
-            this.label3.Text = "Avilable Trips";
-            // 
             // Source
             // 
             this.Source.HeaderText = "Source";
@@ -309,17 +276,77 @@
             this.Destination.Name = "Destination";
             this.Destination.Width = 125;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label3.Location = new System.Drawing.Point(839, 29);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(160, 29);
+            this.label3.TabIndex = 77;
+            this.label3.Text = "Avilable Trips";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label7.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label7.Location = new System.Drawing.Point(386, 349);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(50, 29);
+            this.label7.TabIndex = 78;
+            this.label7.Text = "VIP";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label9.Location = new System.Drawing.Point(384, 391);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(52, 29);
+            this.label9.TabIndex = 79;
+            this.label9.Text = "520";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label10.Location = new System.Drawing.Point(544, 391);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(52, 29);
+            this.label10.TabIndex = 81;
+            this.label10.Text = "520";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label11.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label11.Location = new System.Drawing.Point(517, 349);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(106, 29);
+            this.label11.TabIndex = 80;
+            this.label11.Text = "Econmic";
+            // 
             // BookingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.ClientSize = new System.Drawing.Size(1098, 616);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dgv1);
             this.Controls.Add(this.TicketID);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.TicketPrice);
             this.Controls.Add(this.TicketType);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Ticket);
@@ -353,7 +380,6 @@
         private System.Windows.Forms.DateTimePicker DepatureTime;
         private System.Windows.Forms.Button UpdateTrip;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox TicketPrice;
         private System.Windows.Forms.ComboBox TicketType;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label Ticket;
@@ -365,5 +391,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Source;
         private System.Windows.Forms.DataGridViewTextBoxColumn Destination;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
     }
 }

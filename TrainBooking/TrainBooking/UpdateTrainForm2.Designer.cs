@@ -45,11 +45,10 @@
             this.Title.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Title.Location = new System.Drawing.Point(22, 33);
             this.Title.Name = "Title";
-            this.Title.Size = new System.Drawing.Size(277, 48);
+            this.Title.Size = new System.Drawing.Size(278, 48);
             this.Title.TabIndex = 18;
-            this.Title.Text = "Update Train " + UpdateTrainForm1.trainID.ToString();
+            this.Title.Text = "Update Train 0";
             this.Title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            
             // 
             // UpdateTrain
             // 
@@ -87,7 +86,6 @@
             this.TrainStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.TrainStatus.Location = new System.Drawing.Point(173, 190);
             this.TrainStatus.Name = "TrainStatus";
-            this.TrainStatus.PasswordChar = '*';
             this.TrainStatus.Size = new System.Drawing.Size(316, 34);
             this.TrainStatus.TabIndex = 22;
             // 
