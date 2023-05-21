@@ -18,18 +18,6 @@ namespace TrainBooking
             TrainStatus = trainStatus;
             Capacity = capacity;
         }
-
-        public bool setTrainID(int ID)
-        {
-            DBConnection conn = new DBConnection();
-            SqlConnection connection = conn.ConnectToDatabase();
-            SqlCommand command = new SqlCommand($"SELECT Count(TrainID) FROM Train WHERE TrainID = {ID}", connection);
-
-            int isExist = (int)command.ExecuteScalar();
-            TrainID = ID;
-            return isExist == 1;
+       
         }
-
-
-    }
 }
