@@ -8,10 +8,10 @@ namespace TrainBooking
     public class Train
     {
 
-        private int TrainID;
-        private string TrainName;
-        private string TrainStatus;
-        private int Capacity;
+        public int TrainID;
+        public string TrainName;
+        public string TrainStatus;
+        public int Capacity;
 
 
         public Train(int trainID, string trainName, string trainStatus, int capacity)
@@ -21,7 +21,12 @@ namespace TrainBooking
             TrainStatus = trainStatus;
             Capacity = capacity;
         }
+        public Train() { }
 
+        public Train GetTrain()
+        {
+            return this;
+        }
     }
 
 }

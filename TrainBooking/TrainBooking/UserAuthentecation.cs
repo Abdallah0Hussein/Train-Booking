@@ -78,7 +78,30 @@ namespace TrainBooking
             return count == 1;
 
         }
-    }
 
+        public Train retrieveTrainData(SqlConnection connection, int ID)
+        {
+            Train train = new Train();
+            
+            string query = "SELECT TrainID, Name, Capacity, Status FROM Train WHERE TrainID = @trainID";
+            SqlCommand command = new SqlCommand(query, connection);
+            command.Parameters.AddWithValue("@trainID", ID);
+            using (SqlDataReader reader = command.ExecuteReader())
+            {
+                if (reader.Read()) // Check if there is a row to read
+                {
+                    train.TrainID = reader.GetInt32(0);         // Assuming TrainID is the first column
+                    train.TrainName = reader.GetString(1);    // Assuming TrainName is the second column
+                    train.Capacity = reader.GetInt32(2);           // Assuming Capacity is the thirs column
+                    train.TrainStatus = reader.GetString(3);           // Assuming TrainStatus is the fourth column
+                }
+            }
+
+            return train;
+
+        }
+    }
 }
+
+
 

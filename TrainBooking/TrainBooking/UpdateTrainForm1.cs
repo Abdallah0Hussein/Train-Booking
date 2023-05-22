@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace TrainBooking
@@ -20,11 +14,12 @@ namespace TrainBooking
 
         private void SendTrainID_Click(object sender, EventArgs e)
         {
-            trainID = (int) nTrainID.Value;
-
-
+            trainID = (int)nTrainID.Value;
+           
             UpdateTrainForm2 form2 = new UpdateTrainForm2();
+            form2.TID = trainID;
             form2.ShowDialog();
+            
         }
     }
 }
