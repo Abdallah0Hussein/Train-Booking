@@ -28,6 +28,21 @@ namespace TrainBooking
             this.arrivalT = arrivalT.ToShortDateString() + " " + arrivalT.ToShortTimeString();
         }
 
+        public Trip(int ID) { 
+            tripID = ID;
+        }
+        public Trip() {}
+
+        public void setDepartureT(DateTime departureT)
+        {
+            this.departureT = departureT.ToShortDateString() + " " + departureT.ToShortTimeString();
+        }
+
+        public void setArrivalT(DateTime arrivalT)
+        {
+            this.arrivalT = arrivalT.ToShortDateString() + " " + arrivalT.ToShortTimeString();
+        }
+
         public bool setTrainID(int ID)
         {
             DBConnection conn = new DBConnection();
@@ -49,12 +64,32 @@ namespace TrainBooking
 
             // Validate that DriverID entered by Admin is Exist
             SqlCommand command = new SqlCommand($"SELECT Count(DriverID) FROM Driver WHERE DriverID = {ID}", connection);
-             int isExist = (int)command.ExecuteScalar();
+            int isExist = (int)command.ExecuteScalar();
 
             // Setting the DriverID
             driverID = ID;
 
             return isExist == 1;
         }
+
+        public Trip retrieveTripData(int ID)
+        {
+            DBConnection conn = new DBConnection();
+            SqlConnection connection = conn.ConnectToDatabase();
+
+            SqlCommand command = new SqlCommand($"SELECT * FROM Trip WHERE TripID = {ID}", connection);
+
+            SqlDataReader reader = command.ExecuteReader();
+            this.tripID = ID;
+            if (reader.Read()) // Check if there is a row to read
+            {
+                 this.trainID = reader.GetInt32(1); 
+                 this.driverID = reader.GetInt32(2);
+                 this.departureT = reader.GetSqlDateTime(4).ToString();
+                 this.arrivalT = reader.GetSqlDateTime(5).ToString();
+                 reader.Close();
+            }
+            return this;
+        }    
     }
 }

@@ -33,6 +33,7 @@ namespace TrainBooking
             TrainCapacity.Text = train.Capacity.ToString();
             TrainID.Enabled = false;
         }
+
         private void UpdateTrain_Click(object sender, EventArgs e)
         {
             int trainID = UpdateTrainForm1.trainID;
