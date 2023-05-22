@@ -2,19 +2,58 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TrainBooking
 {
+
     public partial class UpdateTripForm2 : Form
     {
         public UpdateTripForm2()
         {
             InitializeComponent();
+            this.Load += Form_Load;
+        }
+
+        private void Form_Load(object sender, EventArgs e)
+        {
+            Trip trip = new Trip();
+            trip.retrieveTripData(UpdateTripForm1.tripID);
+
+            TrainID.Value = trip.TrainID;
+            DriverID.Value = trip.DriverID;
+            DepartureTime.Value = DateTime.Parse(trip.departureT);
+            ArrivalTime.Value = DateTime.Parse(trip.arrivalT);
+
+
+            DBConnection conn = new DBConnection();
+            SqlConnection connection = conn.ConnectToDatabase();
+
+            SqlCommand command = new SqlCommand($"SELECT Name FROM Station WHERE TripID = {trip.TripID} AND Station_Type = 'Source'", connection);
+
+            SqlDataReader reader = command.ExecuteReader();
+
+            if (reader.Read()) // Check if there is a row to read
+            {
+                SrcStation.Text = reader.GetString(0);
+            }
+            reader.Close();
+
+
+            command = new SqlCommand($"SELECT Name FROM Station WHERE TripID = {trip.TripID} AND Station_Type = 'Destination'", connection);
+            reader = command.ExecuteReader();
+            if (reader.Read()) // Check if there is a row to read
+            {
+                DestStation.Text = reader.GetString(0);
+            }
+            reader.Close();
+
         }
 
         private void UpdateTrip_Click(object sender, EventArgs e)
