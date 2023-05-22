@@ -64,14 +64,30 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Admin.cs" />
-    <Compile Include="Bookingattribuits.cs" />
+    <Compile Include="Booking.cs" />
+    <Compile Include="BookingDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BookingDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="BookingForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="BookingForm.Designer.cs">
       <DependentUpon>BookingForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ShowTripsFrom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowTripsFrom.Designer.cs">
+      <DependentUpon>ShowTripsFrom.cs</DependentUpon>
+    </Compile>
     <Compile Include="Train.cs" />
+    <Compile Include="TrainBookingDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TrainBookingDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Trip.cs" />
     <Compile Include="Customer.cs" />
     <Compile Include="DBConnection.cs" />
@@ -170,6 +186,9 @@
     <EmbeddedResource Include="CustomerUpdate.resx">
       <DependentUpon>CustomerUpdate.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ShowTripsFrom.resx">
+      <DependentUpon>ShowTripsFrom.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UpdateTripForm2.resx">
       <DependentUpon>UpdateTripForm2.cs</DependentUpon>
     </EmbeddedResource>
@@ -203,6 +222,17 @@
     <EmbeddedResource Include="UpdateTripForm1.resx">
       <DependentUpon>UpdateTripForm1.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="BookingDataSet.xsc">
+      <DependentUpon>BookingDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BookingDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BookingDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BookingDataSet.xss">
+      <DependentUpon>BookingDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -222,6 +252,17 @@
     </None>
     <None Include="TrainBookingDataSet.xss">
       <DependentUpon>TrainBookingDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TrainBookingDataSet1.xsc">
+      <DependentUpon>TrainBookingDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="TrainBookingDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TrainBookingDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TrainBookingDataSet1.xss">
+      <DependentUpon>TrainBookingDataSet1.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

@@ -24,7 +24,7 @@ namespace TrainBooking
         }
         private void avilableTrips_Load(object sender, EventArgs e)
         {
-            DBConnection conn = new DBConnection();
+            /*DBConnection conn = new DBConnection();
             SqlConnection connection = conn.ConnectToDatabase();
 
             // Retrieve the desired attributes from the Station table for "Source" column
@@ -60,23 +60,23 @@ namespace TrainBooking
             TicketID.Text = TicketNum.ToString();
             TicketID.Enabled = false;
 
-            connection.Close();
+            connection.Close();*/
         }
 
 
 
 
-        private void UpdateTrip_Click(object sender, EventArgs e)
+        private void Booking_Click(object sender, EventArgs e)
         {
             DBConnection conn = new DBConnection();
             SqlConnection connection = conn.ConnectToDatabase();
 
-            Bookingattribuits Bk = new Bookingattribuits();
+            Booking Bk = new Booking();
             DateTime departureTime = DepatureTime.Value;
             int PassengerID = Customer.cus.CustomerID;
             int TicketNumber = 2;
-            Bookingattribuits bookingattribuits = new Bookingattribuits();
-            bookingattribuits.Bookingattribuitsreg(connection, PassengerID, TicketNumber, departureTime);
+            Booking bookingattribuits = new Booking();
+            bookingattribuits.AddBooking(connection, PassengerID, TicketNumber, departureTime);
 
 
             
@@ -85,19 +85,33 @@ namespace TrainBooking
             if (Type == "VIP Ticket")
             {
                 decimal price = 520;
-                int TripID = 1;
-                int seatNumber = 1;
-                Bk.BookingTypeTicket(connection, PassengerID, TripID, seatNumber, Type, price);
+                int TripID = 5;
+                Bk.AddTicket(connection, PassengerID, TripID, Type, price);
+                int seatNumber = Bk.UpdateSeatNumber(connection,TripID);
+                Bk.UpdateTicket(connection, PassengerID, TripID, seatNumber);
             }
             else if (Type == "Econmic Ticket")
             {
-                int TripID = 1;
-                int seatNumber = 1;
                 decimal price = 260;
-                Bk.BookingTypeTicket(connection, PassengerID, TripID, seatNumber, Type, price);
+                int TripID = 5;
+                Bk.AddTicket(connection, PassengerID, TripID, Type, price);
+                int seatNumber = Bk.UpdateSeatNumber(connection, TripID);
+                Bk.UpdateTicket(connection, PassengerID, TripID, seatNumber);
             }
+        }
+
+        private void BookingForm_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'bookingDataSet.Train' table. You can move, or remove it, as needed.
+            this.trainTableAdapter.Fill(this.bookingDataSet.Train);
 
         }
+
+        private void ShowTrips_Click(object sender, EventArgs e)
+        {
+            ShowTripsFrom showTripsFrom = new ShowTripsFrom();
+            showTripsFrom.ShowDialog();
         }
+    }
     }
 

@@ -94,7 +94,7 @@
             // TrainName
             // 
             this.TrainName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.TrainName.Location = new System.Drawing.Point(173, 157);
+            this.TrainName.Location = new System.Drawing.Point(173, 160);
             this.TrainName.Name = "TrainName";
             this.TrainName.Size = new System.Drawing.Size(316, 34);
             this.TrainName.TabIndex = 21;

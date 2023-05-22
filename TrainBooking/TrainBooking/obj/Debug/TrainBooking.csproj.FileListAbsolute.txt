@@ -98,3 +98,4 @@ C:\Users\miree\OneDrive\المستندات\GitHub\Train-Booking\TrainBooking\Tra
 C:\Users\miree\OneDrive\المستندات\GitHub\Train-Booking\TrainBooking\TrainBooking\bin\Debug\TrainBooking.exe.config
 C:\Users\miree\OneDrive\المستندات\GitHub\Train-Booking\TrainBooking\TrainBooking\bin\Debug\TrainBooking.exe
 C:\Users\miree\OneDrive\المستندات\GitHub\Train-Booking\TrainBooking\TrainBooking\bin\Debug\TrainBooking.pdb
+F:\DataBase Project\TrainBooking\TrainBooking\obj\Debug\TrainBooking.ShowTripsFrom.resources

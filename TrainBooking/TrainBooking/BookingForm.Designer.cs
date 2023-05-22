@@ -36,7 +36,7 @@
             this.ArrivalTime = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.DepatureTime = new System.Windows.Forms.DateTimePicker();
-            this.UpdateTrip = new System.Windows.Forms.Button();
+            this.Booking = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.TicketType = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -44,18 +44,23 @@
             this.label2 = new System.Windows.Forms.Label();
             this.trainBookingDataSet = new TrainBooking.TrainBookingDataSet();
             this.trainBookingDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dgv1 = new System.Windows.Forms.DataGridView();
-            this.Source = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Destination = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label3 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.TicketID = new System.Windows.Forms.TextBox();
+            this.bookingDataSet = new TrainBooking.BookingDataSet();
+            this.bookingDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.trainBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.trainTableAdapter = new TrainBooking.BookingDataSetTableAdapters.TrainTableAdapter();
+            this.trainBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.ShowTrips = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.trainBookingDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trainBookingDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookingDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookingDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trainBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trainBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // DestStation
@@ -151,17 +156,17 @@
             this.DepatureTime.TabIndex = 61;
             this.DepatureTime.Value = new System.DateTime(2023, 5, 19, 9, 55, 39, 0);
             // 
-            // UpdateTrip
+            // Booking
             // 
-            this.UpdateTrip.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
-            this.UpdateTrip.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.UpdateTrip.Location = new System.Drawing.Point(309, 514);
-            this.UpdateTrip.Name = "UpdateTrip";
-            this.UpdateTrip.Size = new System.Drawing.Size(187, 49);
-            this.UpdateTrip.TabIndex = 60;
-            this.UpdateTrip.Text = "Booking";
-            this.UpdateTrip.UseVisualStyleBackColor = true;
-            this.UpdateTrip.Click += new System.EventHandler(this.UpdateTrip_Click);
+            this.Booking.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
+            this.Booking.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.Booking.Location = new System.Drawing.Point(297, 514);
+            this.Booking.Name = "Booking";
+            this.Booking.Size = new System.Drawing.Size(187, 49);
+            this.Booking.TabIndex = 60;
+            this.Booking.Text = "Book";
+            this.Booking.UseVisualStyleBackColor = true;
+            this.Booking.Click += new System.EventHandler(this.Booking_Click);
             // 
             // label4
             // 
@@ -230,44 +235,6 @@
             this.trainBookingDataSetBindingSource.DataSource = this.trainBookingDataSet;
             this.trainBookingDataSetBindingSource.Position = 0;
             // 
-            // dgv1
-            // 
-            this.dgv1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Source,
-            this.Destination});
-            this.dgv1.Location = new System.Drawing.Point(749, 71);
-            this.dgv1.Name = "dgv1";
-            this.dgv1.RowHeadersWidth = 51;
-            this.dgv1.RowTemplate.Height = 24;
-            this.dgv1.Size = new System.Drawing.Size(337, 502);
-            this.dgv1.TabIndex = 76;
-            // 
-            // Source
-            // 
-            this.Source.HeaderText = "Source";
-            this.Source.MinimumWidth = 6;
-            this.Source.Name = "Source";
-            this.Source.Width = 125;
-            // 
-            // Destination
-            // 
-            this.Destination.HeaderText = "Destination";
-            this.Destination.MinimumWidth = 6;
-            this.Destination.Name = "Destination";
-            this.Destination.Width = 125;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(839, 29);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(160, 29);
-            this.label3.TabIndex = 77;
-            this.label3.Text = "Avilable Trips";
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -322,19 +289,54 @@
             this.TicketID.Size = new System.Drawing.Size(419, 34);
             this.TicketID.TabIndex = 82;
             // 
+            // bookingDataSet
+            // 
+            this.bookingDataSet.DataSetName = "BookingDataSet";
+            this.bookingDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // bookingDataSetBindingSource
+            // 
+            this.bookingDataSetBindingSource.DataSource = this.bookingDataSet;
+            this.bookingDataSetBindingSource.Position = 0;
+            // 
+            // trainBindingSource
+            // 
+            this.trainBindingSource.DataMember = "Train";
+            this.trainBindingSource.DataSource = this.bookingDataSet;
+            // 
+            // trainTableAdapter
+            // 
+            this.trainTableAdapter.ClearBeforeFill = true;
+            // 
+            // trainBindingSource1
+            // 
+            this.trainBindingSource1.DataMember = "Train";
+            this.trainBindingSource1.DataSource = this.bookingDataSetBindingSource;
+            // 
+            // ShowTrips
+            // 
+            this.ShowTrips.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
+            this.ShowTrips.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.ShowTrips.Location = new System.Drawing.Point(570, 514);
+            this.ShowTrips.Name = "ShowTrips";
+            this.ShowTrips.Size = new System.Drawing.Size(187, 49);
+            this.ShowTrips.TabIndex = 84;
+            this.ShowTrips.Text = "Show All Trips";
+            this.ShowTrips.UseVisualStyleBackColor = true;
+            this.ShowTrips.Click += new System.EventHandler(this.ShowTrips_Click);
+            // 
             // BookingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.ClientSize = new System.Drawing.Size(1098, 616);
+            this.ClientSize = new System.Drawing.Size(961, 616);
+            this.Controls.Add(this.ShowTrips);
             this.Controls.Add(this.TicketID);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.dgv1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.TicketType);
             this.Controls.Add(this.label1);
@@ -346,13 +348,17 @@
             this.Controls.Add(this.ArrivalTime);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.DepatureTime);
-            this.Controls.Add(this.UpdateTrip);
+            this.Controls.Add(this.Booking);
             this.Controls.Add(this.label4);
             this.Name = "BookingForm";
             this.Text = "BookingScreen";
+            this.Load += new System.EventHandler(this.BookingForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.trainBookingDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trainBookingDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookingDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookingDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trainBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trainBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -367,7 +373,7 @@
         private System.Windows.Forms.DateTimePicker ArrivalTime;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker DepatureTime;
-        private System.Windows.Forms.Button UpdateTrip;
+        private System.Windows.Forms.Button Booking;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox TicketType;
         private System.Windows.Forms.Label label1;
@@ -375,14 +381,16 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.BindingSource trainBookingDataSetBindingSource;
         private TrainBookingDataSet trainBookingDataSet;
-        private System.Windows.Forms.DataGridView dgv1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Source;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Destination;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox TicketID;
+        private System.Windows.Forms.BindingSource bookingDataSetBindingSource;
+        private BookingDataSet bookingDataSet;
+        private System.Windows.Forms.BindingSource trainBindingSource;
+        private BookingDataSetTableAdapters.TrainTableAdapter trainTableAdapter;
+        private System.Windows.Forms.BindingSource trainBindingSource1;
+        private System.Windows.Forms.Button ShowTrips;
     }
 }
