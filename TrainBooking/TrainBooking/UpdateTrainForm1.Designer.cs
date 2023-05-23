@@ -39,22 +39,26 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(15, 128);
+            this.label1.Location = new System.Drawing.Point(26, 97);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(167, 29);
+            this.label1.Size = new System.Drawing.Size(138, 23);
             this.label1.TabIndex = 13;
             this.label1.Text = "Enter Train ID:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Tai Le", 22F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(12, 30);
+            this.label4.Location = new System.Drawing.Point(11, 19);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(277, 48);
+            this.label4.Size = new System.Drawing.Size(226, 39);
             this.label4.TabIndex = 12;
             this.label4.Text = "Update a Train";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -63,9 +67,10 @@
             // 
             this.SendTrainID.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
             this.SendTrainID.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.SendTrainID.Location = new System.Drawing.Point(359, 181);
+            this.SendTrainID.Location = new System.Drawing.Point(258, 146);
+            this.SendTrainID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.SendTrainID.Name = "SendTrainID";
-            this.SendTrainID.Size = new System.Drawing.Size(187, 49);
+            this.SendTrainID.Size = new System.Drawing.Size(140, 40);
             this.SendTrainID.TabIndex = 17;
             this.SendTrainID.Text = "Send";
             this.SendTrainID.UseVisualStyleBackColor = true;
@@ -74,22 +79,24 @@
             // nTrainID
             // 
             this.nTrainID.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.nTrainID.Location = new System.Drawing.Point(230, 123);
+            this.nTrainID.Location = new System.Drawing.Point(183, 91);
+            this.nTrainID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.nTrainID.Name = "nTrainID";
-            this.nTrainID.Size = new System.Drawing.Size(301, 34);
+            this.nTrainID.Size = new System.Drawing.Size(206, 29);
             this.nTrainID.TabIndex = 0;
             // 
             // UpdateTrainForm1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(569, 242);
+            this.ClientSize = new System.Drawing.Size(409, 197);
             this.Controls.Add(this.nTrainID);
             this.Controls.Add(this.SendTrainID);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label4);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "UpdateTrainForm1";
             this.Text = "Update a Train";
             ((System.ComponentModel.ISupportInitialize)(this.nTrainID)).EndInit();

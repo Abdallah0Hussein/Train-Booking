@@ -16,7 +16,7 @@ namespace TrainBooking
         {
             ShowTripsFrom showTripsFrom = new ShowTripsFrom();
             showTripsFrom.DTime = DepatureTime.Value;
-            showTripsFrom.ATime = DateTime.Parse(ArrivalTime.Text);
+            showTripsFrom.ATime = ArrivalTime.Value;
             showTripsFrom.SStaion = SrcStation.Text;
             showTripsFrom.DStation = DestStation.Text;
             showTripsFrom.TicketType = TicketType.Text;

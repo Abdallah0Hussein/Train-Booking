@@ -18,7 +18,7 @@ namespace TrainBooking
         }
         public void AddTicket(SqlConnection connection, int PassngerID, int TripID, string TypeTicket, decimal price,int seatNumber = 1)
         {
-            SqlCommand command = new SqlCommand("INSERT INTO [Ticket] (PassengerID, TripID, seatNumber ,ticketType, price) VALUES ('" + PassngerID + "','" + TripID + "','" + seatNumber + "','" + TypeTicket + "','" + price + "')", connection);
+            SqlCommand command = new SqlCommand("INSERT INTO [Ticket] (PassengerID, TripID, seatNumber ,ticketType, price) VALUES (" + PassngerID + "," + TripID + "," + seatNumber + ",'" + TypeTicket + "'," + price + ")", connection);
             command.ExecuteNonQuery();
         }
         public int UpdateSeatNumber(SqlConnection connection, int TripID)
@@ -31,19 +31,19 @@ namespace TrainBooking
         }
             public void UpdateTicket(SqlConnection connection, int PassngerID, int TripID, int seatNumber)
         {
-            SqlCommand command = new SqlCommand("UPDATE[Ticket] SET seatNumber = '"+seatNumber+"' where PassengerID = '"+PassngerID+"' and TripID = '"+TripID+"'", connection);
+            SqlCommand command = new SqlCommand("UPDATE[Ticket] SET seatNumber = "+seatNumber+" where PassengerID = "+PassngerID+" and TripID = "+TripID+";", connection);
             command.ExecuteNonQuery();
         }
 
         public void DeleteBooking(SqlConnection connection, int BookingID)
         {
-            SqlCommand command = new SqlCommand("DELETE FROM Booking WHERE BookingId = '" + BookingID + "';", connection);
+            SqlCommand command = new SqlCommand("DELETE FROM Booking WHERE BookingId = " + BookingID + ";", connection);
             command.ExecuteNonQuery();
         }
 
         public void DeleteTicket(SqlConnection connection, int TicketNumber)
         {
-            SqlCommand command = new SqlCommand("DELETE FROM Ticket WHERE TicketNumber = '" + TicketNumber + "';", connection);
+            SqlCommand command = new SqlCommand("DELETE FROM Ticket WHERE TicketNumber = " + TicketNumber + ";", connection);
             command.ExecuteNonQuery();
         }
         public int getTicketNumber(SqlConnection connection)

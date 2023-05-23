@@ -75,9 +75,10 @@ namespace TrainBooking
             "Riggs Station",
             "Emerald Station",
             "Bacchus Station"});
-            this.DestStation.Location = new System.Drawing.Point(292, 453);
+            this.DestStation.Location = new System.Drawing.Point(219, 368);
+            this.DestStation.Margin = new System.Windows.Forms.Padding(2);
             this.DestStation.Name = "DestStation";
-            this.DestStation.Size = new System.Drawing.Size(329, 34);
+            this.DestStation.Size = new System.Drawing.Size(248, 30);
             this.DestStation.TabIndex = 57;
             // 
             // SrcStation
@@ -95,9 +96,10 @@ namespace TrainBooking
             "Riggs Station",
             "Emerald Station",
             "Bacchus Station"});
-            this.SrcStation.Location = new System.Drawing.Point(292, 381);
+            this.SrcStation.Location = new System.Drawing.Point(219, 310);
+            this.SrcStation.Margin = new System.Windows.Forms.Padding(2);
             this.SrcStation.Name = "SrcStation";
-            this.SrcStation.Size = new System.Drawing.Size(329, 34);
+            this.SrcStation.Size = new System.Drawing.Size(248, 30);
             this.SrcStation.TabIndex = 56;
             // 
             // label8
@@ -105,26 +107,29 @@ namespace TrainBooking
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.label8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label8.Location = new System.Drawing.Point(57, 454);
+            this.label8.Location = new System.Drawing.Point(43, 369);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(213, 29);
+            this.label8.Size = new System.Drawing.Size(163, 24);
             this.label8.TabIndex = 53;
             this.label8.Text = "Destination Station";
             // 
             // DriverID
             // 
             this.DriverID.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.DriverID.Location = new System.Drawing.Point(292, 179);
+            this.DriverID.Location = new System.Drawing.Point(219, 145);
+            this.DriverID.Margin = new System.Windows.Forms.Padding(2);
             this.DriverID.Name = "DriverID";
-            this.DriverID.Size = new System.Drawing.Size(329, 34);
+            this.DriverID.Size = new System.Drawing.Size(247, 29);
             this.DriverID.TabIndex = 52;
             // 
             // TrainID
             // 
             this.TrainID.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.TrainID.Location = new System.Drawing.Point(292, 117);
+            this.TrainID.Location = new System.Drawing.Point(219, 95);
+            this.TrainID.Margin = new System.Windows.Forms.Padding(2);
             this.TrainID.Name = "TrainID";
-            this.TrainID.Size = new System.Drawing.Size(329, 34);
+            this.TrainID.Size = new System.Drawing.Size(247, 29);
             this.TrainID.TabIndex = 51;
             // 
             // label6
@@ -132,9 +137,10 @@ namespace TrainBooking
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label6.Location = new System.Drawing.Point(58, 381);
+            this.label6.Location = new System.Drawing.Point(44, 310);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(170, 29);
+            this.label6.Size = new System.Drawing.Size(132, 24);
             this.label6.TabIndex = 48;
             this.label6.Text = "Source Station";
             // 
@@ -143,9 +149,10 @@ namespace TrainBooking
             this.ArrivalTime.CustomFormat = "dd / MM / yyyy   hh:mm tt";
             this.ArrivalTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.ArrivalTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.ArrivalTime.Location = new System.Drawing.Point(292, 313);
+            this.ArrivalTime.Location = new System.Drawing.Point(219, 254);
+            this.ArrivalTime.Margin = new System.Windows.Forms.Padding(2);
             this.ArrivalTime.Name = "ArrivalTime";
-            this.ArrivalTime.Size = new System.Drawing.Size(329, 34);
+            this.ArrivalTime.Size = new System.Drawing.Size(248, 29);
             this.ArrivalTime.TabIndex = 47;
             this.ArrivalTime.Value = new System.DateTime(2023, 5, 19, 9, 55, 39, 0);
             // 
@@ -154,9 +161,10 @@ namespace TrainBooking
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(58, 313);
+            this.label5.Location = new System.Drawing.Point(44, 254);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(142, 29);
+            this.label5.Size = new System.Drawing.Size(110, 24);
             this.label5.TabIndex = 46;
             this.label5.Text = "Arrival Time";
             // 
@@ -165,9 +173,10 @@ namespace TrainBooking
             this.DepartureTime.CustomFormat = "dd / MM / yyyy   hh:mm tt";
             this.DepartureTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.DepartureTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.DepartureTime.Location = new System.Drawing.Point(292, 246);
+            this.DepartureTime.Location = new System.Drawing.Point(219, 200);
+            this.DepartureTime.Margin = new System.Windows.Forms.Padding(2);
             this.DepartureTime.Name = "DepartureTime";
-            this.DepartureTime.Size = new System.Drawing.Size(329, 34);
+            this.DepartureTime.Size = new System.Drawing.Size(248, 29);
             this.DepartureTime.TabIndex = 45;
             this.DepartureTime.Value = new System.DateTime(2023, 5, 19, 9, 55, 39, 0);
             // 
@@ -175,9 +184,10 @@ namespace TrainBooking
             // 
             this.UpdateTrip.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
             this.UpdateTrip.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.UpdateTrip.Location = new System.Drawing.Point(248, 539);
+            this.UpdateTrip.Location = new System.Drawing.Point(186, 438);
+            this.UpdateTrip.Margin = new System.Windows.Forms.Padding(2);
             this.UpdateTrip.Name = "UpdateTrip";
-            this.UpdateTrip.Size = new System.Drawing.Size(187, 49);
+            this.UpdateTrip.Size = new System.Drawing.Size(140, 40);
             this.UpdateTrip.TabIndex = 44;
             this.UpdateTrip.Text = "UPDATE";
             this.UpdateTrip.UseVisualStyleBackColor = true;
@@ -188,9 +198,10 @@ namespace TrainBooking
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(58, 246);
+            this.label4.Location = new System.Drawing.Point(44, 200);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(174, 29);
+            this.label4.Size = new System.Drawing.Size(135, 24);
             this.label4.TabIndex = 43;
             this.label4.Text = "Depature Time";
             // 
@@ -199,9 +210,10 @@ namespace TrainBooking
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(57, 181);
+            this.label3.Location = new System.Drawing.Point(43, 147);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 29);
+            this.label3.Size = new System.Drawing.Size(76, 24);
             this.label3.TabIndex = 42;
             this.label3.Text = "DriverID";
             // 
@@ -210,9 +222,10 @@ namespace TrainBooking
             this.lablel.AutoSize = true;
             this.lablel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.lablel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lablel.Location = new System.Drawing.Point(58, 122);
+            this.lablel.Location = new System.Drawing.Point(44, 99);
+            this.lablel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lablel.Name = "lablel";
-            this.lablel.Size = new System.Drawing.Size(92, 29);
+            this.lablel.Size = new System.Drawing.Size(70, 24);
             this.lablel.TabIndex = 41;
             this.lablel.Text = "TrainID";
             // 
@@ -220,13 +233,15 @@ namespace TrainBooking
             // 
             this.Title.AutoEllipsis = true;
             this.Title.AutoSize = true;
+            this.Title.BackColor = System.Drawing.Color.Transparent;
             this.Title.Font = new System.Drawing.Font("Microsoft Tai Le", 22F, System.Drawing.FontStyle.Bold);
             this.Title.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Title.Location = new System.Drawing.Point(21, 26);
+            this.Title.Location = new System.Drawing.Point(16, 21);
+            this.Title.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Title.Name = "Title";
-            this.Title.Size = new System.Drawing.Size(256, 55);
+            this.Title.Size = new System.Drawing.Size(205, 44);
             this.Title.TabIndex = 40;
-            this.Title.Text = "Update Trip 0";
+            this.Title.Text = "Update Trip " + UpdateTripForm1.tripID.ToString();
             this.Title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.Title.UseCompatibleTextRendering = true;
             // 
@@ -252,11 +267,11 @@ namespace TrainBooking
             // 
             // UpdateTripForm2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(697, 599);
+            this.ClientSize = new System.Drawing.Size(523, 487);
             this.Controls.Add(this.DestStation);
             this.Controls.Add(this.SrcStation);
             this.Controls.Add(this.label8);
@@ -271,6 +286,7 @@ namespace TrainBooking
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lablel);
             this.Controls.Add(this.Title);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UpdateTripForm2";
             this.Text = "Update a Trip";
             ((System.ComponentModel.ISupportInitialize)(this.DriverID)).EndInit();
