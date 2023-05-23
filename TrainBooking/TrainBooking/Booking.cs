@@ -34,5 +34,21 @@ namespace TrainBooking
             SqlCommand command = new SqlCommand("UPDATE[Ticket] SET seatNumber = '"+seatNumber+"' where PassengerID = '"+PassngerID+"' and TripID = '"+TripID+"'", connection);
             command.ExecuteNonQuery();
         }
+
+        public void DeleteBooking(SqlConnection connection, int BookingID)
+        {
+            SqlCommand command = new SqlCommand("DELETE FROM Booking WHERE BookingId = '" + BookingID + "';", connection);
+            command.ExecuteNonQuery();
+        }
+
+        public void DeleteTicket(SqlConnection connection, int TicketNumber)
+        {
+            SqlCommand command = new SqlCommand("DELETE FROM Ticket WHERE TicketNumber = '" + TicketNumber + "';", connection);
+            command.ExecuteNonQuery();
+        }
+
+
+
+
     }
 }

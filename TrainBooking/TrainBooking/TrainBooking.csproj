@@ -76,6 +76,12 @@
     <Compile Include="BookingForm.Designer.cs">
       <DependentUpon>BookingForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListBopking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListBopking.Designer.cs">
+      <DependentUpon>ListBopking.cs</DependentUpon>
+    </Compile>
     <Compile Include="ShowTripsFrom.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -190,6 +196,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CustomerUpdate.resx">
       <DependentUpon>CustomerUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListBopking.resx">
+      <DependentUpon>ListBopking.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ShowTripsFrom.resx">
       <DependentUpon>ShowTripsFrom.cs</DependentUpon>
