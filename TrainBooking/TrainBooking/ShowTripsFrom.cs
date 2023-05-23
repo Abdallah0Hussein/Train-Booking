@@ -81,6 +81,7 @@ namespace TrainBooking
             DateTime currentDateTime = DateTime.Now;
             int seatNumber = Bk.UpdateSeatNumber(connection, tripID);
             string Type = TicketType;
+            int TicketID = 0;
 
             if (TrainCapacity >= seatNumber + NumofSeats)
             {
@@ -88,12 +89,14 @@ namespace TrainBooking
                 {
                     decimal price = 520;
 
+                    int BookingID = Bk.AddBooking(connection, PassengerID, TicketNumber, currentDateTime);
                     for (int i = 0; i < this.NumofSeats; i++)
                     {
                         Bk.AddTicket(connection, PassengerID, tripID, Type, price);
-                        Bk.AddBooking(connection, PassengerID, TicketNumber, currentDateTime);
                         seatNumber = Bk.UpdateSeatNumber(connection, tripID);
-                        Bk.UpdateTicket(connection, PassengerID, tripID, seatNumber, intializeLastTicket() - 1);
+                        Bk.UpdateTicket(connection, PassengerID, tripID, seatNumber, intializeLastTicket());
+                        TicketID = Bk.getTicketNumber(connection);
+                        Bk.AddTicketToBook(connection, BookingID, TicketID);
                     }
 
                 }
@@ -101,12 +104,14 @@ namespace TrainBooking
                 {
                     decimal price = 260;
 
+                    int BookingID = Bk.AddBooking(connection, PassengerID, TicketNumber, currentDateTime);
                     for (int i = 0; i < this.NumofSeats; i++)
                     {
                         Bk.AddTicket(connection, PassengerID, tripID, Type, price);
-                        Bk.AddBooking(connection, PassengerID, TicketNumber, currentDateTime);
                         seatNumber = Bk.UpdateSeatNumber(connection, tripID);
                         Bk.UpdateTicket(connection, PassengerID, tripID, seatNumber, intializeLastTicket() - 1);
+                        TicketID = Bk.getTicketNumber(connection);
+                        Bk.AddTicketToBook(connection, BookingID, TicketID);
                     }
                 }
                 MessageBox.Show("The Booking is done!");
