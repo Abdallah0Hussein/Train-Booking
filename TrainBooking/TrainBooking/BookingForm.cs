@@ -79,8 +79,7 @@ namespace TrainBooking
             bookingattribuits.AddBooking(connection, PassengerID, TicketNumber, departureTime);
 
 
-            
-
+  
             string Type = TicketType.Text;
             if (Type == "VIP Ticket")
             {
