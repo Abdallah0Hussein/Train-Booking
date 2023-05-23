@@ -27,7 +27,7 @@ namespace TrainBooking
             DataTable table1 = new DataTable();
 
             // Retrieve the desired attributes from the Station table for "Source" column
-            string sourceQuery = "SELECT * FROM Booking WHERE PassengerID = '" + PassengerID + "';";
+            string sourceQuery = "SELECT B.BookingId, BC.TicketNumber, B.BookingDate FROM Booking B INNER JOIN BookingContains BC ON B.BookingId = BC.BookingID WHERE B.PassengerID = '" + PassengerID + "';";
 
 
             SqlDataAdapter sqlDaSource = new SqlDataAdapter(sourceQuery, connection);
@@ -45,8 +45,8 @@ namespace TrainBooking
             Booking booking = new Booking();
             int bookingID = int.Parse(BookingID.Text);
             int ticketnum = int.Parse(TicketID.Text);
-            booking.DeleteBooking(connection, bookingID);
             booking.DeleteTicket(connection, ticketnum);
+            booking.DeleteBooking(connection, bookingID, ticketnum);
             MessageBox.Show("Your Booking is Canceled");
         }
     }

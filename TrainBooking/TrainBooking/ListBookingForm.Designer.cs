@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListBookingForm));
             this.button2 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -43,7 +44,7 @@
             this.button2.BackColor = System.Drawing.SystemColors.MenuBar;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button2.Location = new System.Drawing.Point(289, 353);
+            this.button2.Location = new System.Drawing.Point(341, 516);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(222, 74);
             this.button2.TabIndex = 2;
@@ -55,19 +56,27 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Tai Le", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(45, 41);
+            this.dataGridView1.Location = new System.Drawing.Point(51, 27);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(717, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(778, 322);
             this.dataGridView1.TabIndex = 3;
             // 
             // BookingID
             // 
             this.BookingID.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.BookingID.Location = new System.Drawing.Point(314, 221);
+            this.BookingID.Location = new System.Drawing.Point(313, 387);
             this.BookingID.Name = "BookingID";
             this.BookingID.Size = new System.Drawing.Size(316, 34);
             this.BookingID.TabIndex = 5;
@@ -77,7 +86,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(159, 226);
+            this.label1.Location = new System.Drawing.Point(140, 392);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(131, 29);
             this.label1.TabIndex = 4;
@@ -86,7 +95,7 @@
             // TicketID
             // 
             this.TicketID.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.TicketID.Location = new System.Drawing.Point(314, 278);
+            this.TicketID.Location = new System.Drawing.Point(313, 456);
             this.TicketID.Name = "TicketID";
             this.TicketID.Size = new System.Drawing.Size(316, 34);
             this.TicketID.TabIndex = 7;
@@ -96,7 +105,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(159, 281);
+            this.label2.Location = new System.Drawing.Point(140, 456);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(108, 29);
             this.label2.TabIndex = 6;
@@ -108,7 +117,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(892, 602);
             this.Controls.Add(this.TicketID);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.BookingID);
