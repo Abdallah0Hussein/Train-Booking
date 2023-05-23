@@ -45,9 +45,34 @@ namespace TrainBooking
             Booking booking = new Booking();
             int bookingID = (int) BookingID.Value;
             int ticketnum = (int) TicketID.Value;
-            booking.DeleteTicket(connection, ticketnum);
-            booking.DeleteBooking(connection, bookingID, ticketnum);
-            MessageBox.Show("Your Booking is Canceled");
+           
+            SqlCommand command = new SqlCommand($"SELECT BookingID FROM BookingContains WHERE BookingID = {bookingID} and TicketNumber = {ticketnum}", connection);
+            SqlDataReader Reader = command.ExecuteReader();
+
+            int errFlag = 0;
+
+            if (!Reader.HasRows)
+            {
+                TicketErr.SetError(BookingID, "This Ticket Does not Exist with Speified BookingID");
+                MessageBox.Show("This Ticket Does not Exist with Speified BookingID");
+                ++errFlag;
+            }
+            else
+            {
+                TicketErr.Clear();
+                --errFlag;
+            }
+
+            if (errFlag == -1)
+            {
+                Reader.Close();
+                booking.DeleteTicket(connection, ticketnum);
+                booking.DeleteBooking(connection, bookingID, ticketnum);
+                MessageBox.Show("Your Booking is Canceled");
+            }
+
         }
+
+        
     }
 }

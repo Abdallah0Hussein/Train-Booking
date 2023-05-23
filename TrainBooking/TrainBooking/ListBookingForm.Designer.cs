@@ -29,19 +29,17 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.button2 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.BookingID = new System.Windows.Forms.NumericUpDown();
             this.TicketID = new System.Windows.Forms.NumericUpDown();
-            this.BookingErr = new System.Windows.Forms.ErrorProvider(this.components);
             this.TicketErr = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BookingID)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TicketID)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BookingErr)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TicketErr)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,21 +60,21 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Tai Le", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Tai Le", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(51, 27);
+            this.dataGridView1.Location = new System.Drawing.Point(132, 36);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(778, 322);
+            this.dataGridView1.Size = new System.Drawing.Size(622, 322);
             this.dataGridView1.TabIndex = 3;
             // 
             // label1
@@ -147,10 +145,6 @@
             0,
             0});
             // 
-            // BookingErr
-            // 
-            this.BookingErr.ContainerControl = this;
-            // 
             // TicketErr
             // 
             this.TicketErr.ContainerControl = this;
@@ -173,7 +167,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BookingID)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TicketID)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BookingErr)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TicketErr)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -188,7 +181,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.NumericUpDown BookingID;
         private System.Windows.Forms.NumericUpDown TicketID;
-        private System.Windows.Forms.ErrorProvider BookingErr;
         private System.Windows.Forms.ErrorProvider TicketErr;
     }
 }
