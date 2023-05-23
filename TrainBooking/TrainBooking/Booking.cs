@@ -23,15 +23,14 @@ namespace TrainBooking
         }
         public int UpdateSeatNumber(SqlConnection connection, int TripID)
         {
-            SqlCommand command = new SqlCommand(" SELECT COUNT(TripID) FROM Ticket WHERE TripID = @TripID", connection);
-            command.Parameters.AddWithValue("@TripID", TripID);
+            SqlCommand command = new SqlCommand($"SELECT MAX(seatNumber) FROM Ticket WHERE TripID = {TripID}", connection);
 
             int seat = (int)command.ExecuteScalar();
             return seat;
         }
-            public void UpdateTicket(SqlConnection connection, int PassngerID, int TripID, int seatNumber)
+        public void UpdateTicket(SqlConnection connection, int PassngerID, int TripID, int seatNumber, int LastTicket)
         {
-            SqlCommand command = new SqlCommand("UPDATE[Ticket] SET seatNumber = "+seatNumber+" where PassengerID = "+PassngerID+" and TripID = "+TripID+";", connection);
+            SqlCommand command = new SqlCommand("UPDATE [Ticket] SET seatNumber = "+ (seatNumber + 1) +" where PassengerID = "+PassngerID+" and TripID = "+TripID+" and TicketNumber > "+LastTicket+";", connection);
             command.ExecuteNonQuery();
         }
 

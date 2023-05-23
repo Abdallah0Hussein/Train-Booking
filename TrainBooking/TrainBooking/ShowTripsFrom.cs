@@ -13,9 +13,25 @@ namespace TrainBooking
         public string DStation { get; set; }
         public string TicketType { get; set; }
 
+        public int NumofSeats { get; set; }
+
+        public static int LastTicket { get; set; }
+
         public ShowTripsFrom()
         {
             InitializeComponent();
+        }
+
+        public static int intializeLastTicket()
+        {
+            DBConnection conn = new DBConnection();
+            SqlConnection connection = conn.ConnectToDatabase();
+
+            SqlCommand command = new SqlCommand("SELECT MAX(TicketNumber) FROM Ticket", connection);
+
+            LastTicket = Convert.ToInt32(command.ExecuteScalar());
+
+            return LastTicket;
         }
 
         private void ShowTripsFrom_Load(object sender, EventArgs e)
@@ -57,29 +73,38 @@ namespace TrainBooking
             /*DateTime arrivalTime = ATime;*/
             int PassengerID = Customer.cus.CustomerID;
             int TicketNumber = Bk.getTicketNumber(connection) + 1;
-
-
-
+            int TrainCapacity = 0;
+            int tripID = int.Parse(TripID.Text);
+            SqlCommand command = new SqlCommand($"SELECT Capacity From Train WHERE TrainID = (SELECT TrainID FROM Trip WHERE TripID = {tripID})", connection);
+            TrainCapacity = (int)command.ExecuteScalar();
+            
             DateTime currentDateTime = DateTime.Now;
 
             string Type = TicketType;
             if (Type == "VIP Ticket")
             {
                 decimal price = 520;
-                int tripID = int.Parse(TripID.Text);
-                Bk.AddTicket(connection, PassengerID, tripID, Type, price);
-                Bk.AddBooking(connection, PassengerID, TicketNumber, currentDateTime);
-                int seatNumber = Bk.UpdateSeatNumber(connection, tripID);
-                Bk.UpdateTicket(connection, PassengerID, tripID, seatNumber);
+
+                for (int i = 0; i < this.NumofSeats; i++)
+                {
+                    Bk.AddTicket(connection, PassengerID, tripID, Type, price);
+                    Bk.AddBooking(connection, PassengerID, TicketNumber, currentDateTime);
+                    int seatNumber = Bk.UpdateSeatNumber(connection, tripID);
+                    Bk.UpdateTicket(connection, PassengerID, tripID, seatNumber, intializeLastTicket() - 1);
+                }
+
             }
             else if (Type == "Econmic Ticket")
             {
                 decimal price = 260;
-                int tripID = int.Parse(TripID.Text);
-                Bk.AddTicket(connection, PassengerID, tripID, Type, price);
-                Bk.AddBooking(connection, PassengerID, TicketNumber, currentDateTime);
-                int seatNumber = Bk.UpdateSeatNumber(connection, tripID);
-                Bk.UpdateTicket(connection, PassengerID, tripID, seatNumber);
+
+                for (int i = 0; i < this.NumofSeats; i++)
+                {
+                    Bk.AddTicket(connection, PassengerID, tripID, Type, price);
+                    Bk.AddBooking(connection, PassengerID, TicketNumber, currentDateTime);
+                    int seatNumber = Bk.UpdateSeatNumber(connection, tripID);
+                    Bk.UpdateTicket(connection, PassengerID, tripID, seatNumber, intializeLastTicket() - 1);
+                }
             }
 
             MessageBox.Show("The Booking is done!");

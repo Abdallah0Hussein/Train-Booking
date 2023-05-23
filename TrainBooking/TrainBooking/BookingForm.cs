@@ -5,10 +5,11 @@ namespace TrainBooking
 {
     public partial class BookingForm : Form
     {
+        public static int LastTicket;
         public BookingForm()
         {
             InitializeComponent();
-
+            LastTicket = ShowTripsFrom.intializeLastTicket();
         }
 
 
@@ -20,6 +21,7 @@ namespace TrainBooking
             showTripsFrom.SStaion = SrcStation.Text;
             showTripsFrom.DStation = DestStation.Text;
             showTripsFrom.TicketType = TicketType.Text;
+            showTripsFrom.NumofSeats = (int) NumofSeats.Value;
             showTripsFrom.ShowDialog();
         }
     }

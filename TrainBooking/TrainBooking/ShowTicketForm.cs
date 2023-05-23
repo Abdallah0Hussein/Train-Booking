@@ -14,9 +14,11 @@ namespace TrainBooking
     public partial class ShowTicketForm : Form
     {
         public int TicketNum { get; set; }
+        public int LastTicket;
         public ShowTicketForm()
         {
             InitializeComponent();
+            LastTicket = BookingForm.LastTicket;
         }
 
         private void ShowTicketForm_Load(object sender, EventArgs e)
@@ -28,7 +30,7 @@ namespace TrainBooking
             DataTable table1 = new DataTable();
 
             // Retrieve the desired attributes from the Station table for "Source" column
-            string sourceQuery = "SELECT * From Ticket Where TicketNumber = '"+TicketNum+"' ";
+            string sourceQuery = $"SELECT * From Ticket Where TicketNumber > {LastTicket}";
 
 
 
@@ -39,5 +41,6 @@ namespace TrainBooking
             // Set the merged DataTable as the DataSource of the DataGridView
             dataGridView1.DataSource = table1;
         }
+
     }
 }

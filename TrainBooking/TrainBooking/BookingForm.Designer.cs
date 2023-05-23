@@ -54,13 +54,14 @@
             this.trainBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.ShowTrips = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.NumOfSeats = new System.Windows.Forms.TextBox();
+            this.NumofSeats = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.trainBookingDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trainBookingDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookingDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookingDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trainBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trainBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NumofSeats)).BeginInit();
             this.SuspendLayout();
             // 
             // DestStation
@@ -78,10 +79,10 @@
             "Riggs Station",
             "Emerald Station",
             "Bacchus Station"});
-            this.DestStation.Location = new System.Drawing.Point(224, 169);
-            this.DestStation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DestStation.Location = new System.Drawing.Point(299, 208);
+            this.DestStation.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DestStation.Name = "DestStation";
-            this.DestStation.Size = new System.Drawing.Size(306, 30);
+            this.DestStation.Size = new System.Drawing.Size(407, 34);
             this.DestStation.TabIndex = 68;
             // 
             // SrcStation
@@ -99,10 +100,10 @@
             "Riggs Station",
             "Emerald Station",
             "Bacchus Station"});
-            this.SrcStation.Location = new System.Drawing.Point(224, 114);
-            this.SrcStation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SrcStation.Location = new System.Drawing.Point(299, 140);
+            this.SrcStation.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SrcStation.Name = "SrcStation";
-            this.SrcStation.Size = new System.Drawing.Size(306, 30);
+            this.SrcStation.Size = new System.Drawing.Size(407, 34);
             this.SrcStation.TabIndex = 67;
             // 
             // label8
@@ -110,10 +111,9 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.label8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label8.Location = new System.Drawing.Point(47, 169);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Location = new System.Drawing.Point(63, 208);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(163, 24);
+            this.label8.Size = new System.Drawing.Size(213, 29);
             this.label8.TabIndex = 66;
             this.label8.Text = "Destination Station";
             // 
@@ -122,10 +122,9 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label6.Location = new System.Drawing.Point(48, 114);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(64, 140);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(132, 24);
+            this.label6.Size = new System.Drawing.Size(170, 29);
             this.label6.TabIndex = 64;
             this.label6.Text = "Source Station";
             // 
@@ -134,10 +133,10 @@
             this.ArrivalTime.CustomFormat = "dd / MM / yyyy  hh:mm tt";
             this.ArrivalTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.ArrivalTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.ArrivalTime.Location = new System.Drawing.Point(223, 59);
-            this.ArrivalTime.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ArrivalTime.Location = new System.Drawing.Point(297, 73);
+            this.ArrivalTime.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ArrivalTime.Name = "ArrivalTime";
-            this.ArrivalTime.Size = new System.Drawing.Size(306, 29);
+            this.ArrivalTime.Size = new System.Drawing.Size(407, 34);
             this.ArrivalTime.TabIndex = 63;
             this.ArrivalTime.Value = new System.DateTime(2023, 5, 19, 9, 55, 39, 0);
             // 
@@ -146,10 +145,9 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(47, 59);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(63, 73);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(110, 24);
+            this.label5.Size = new System.Drawing.Size(142, 29);
             this.label5.TabIndex = 62;
             this.label5.Text = "Arrival Time";
             // 
@@ -158,10 +156,10 @@
             this.DepatureTime.CustomFormat = "dd / MM / yyyy  hh:mm tt";
             this.DepatureTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.DepatureTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.DepatureTime.Location = new System.Drawing.Point(223, 5);
-            this.DepatureTime.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DepatureTime.Location = new System.Drawing.Point(297, 6);
+            this.DepatureTime.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DepatureTime.Name = "DepatureTime";
-            this.DepatureTime.Size = new System.Drawing.Size(306, 29);
+            this.DepatureTime.Size = new System.Drawing.Size(407, 34);
             this.DepatureTime.TabIndex = 61;
             this.DepatureTime.Value = new System.DateTime(2023, 5, 19, 9, 55, 39, 0);
             // 
@@ -170,10 +168,9 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(47, 5);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(63, 6);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(135, 24);
+            this.label4.Size = new System.Drawing.Size(174, 29);
             this.label4.TabIndex = 59;
             this.label4.Text = "Depature Time";
             // 
@@ -185,10 +182,10 @@
             this.TicketType.Items.AddRange(new object[] {
             "VIP Ticket",
             "Econmic Ticket"});
-            this.TicketType.Location = new System.Drawing.Point(224, 223);
-            this.TicketType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TicketType.Location = new System.Drawing.Point(299, 274);
+            this.TicketType.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TicketType.Name = "TicketType";
-            this.TicketType.Size = new System.Drawing.Size(306, 30);
+            this.TicketType.Size = new System.Drawing.Size(407, 34);
             this.TicketType.TabIndex = 71;
             // 
             // label1
@@ -196,10 +193,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(49, 282);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(65, 347);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(108, 24);
+            this.label1.Size = new System.Drawing.Size(141, 29);
             this.label1.TabIndex = 70;
             this.label1.Text = "Ticket Price";
             // 
@@ -208,10 +204,9 @@
             this.Ticket.AutoSize = true;
             this.Ticket.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.Ticket.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Ticket.Location = new System.Drawing.Point(47, 223);
-            this.Ticket.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Ticket.Location = new System.Drawing.Point(63, 274);
             this.Ticket.Name = "Ticket";
-            this.Ticket.Size = new System.Drawing.Size(108, 24);
+            this.Ticket.Size = new System.Drawing.Size(140, 29);
             this.Ticket.TabIndex = 69;
             this.Ticket.Text = "Ticket Type";
             // 
@@ -231,10 +226,9 @@
             this.label7.BackColor = System.Drawing.SystemColors.HighlightText;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.label7.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label7.Location = new System.Drawing.Point(281, 262);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(375, 322);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(39, 24);
+            this.label7.Size = new System.Drawing.Size(50, 29);
             this.label7.TabIndex = 78;
             this.label7.Text = "VIP";
             // 
@@ -243,10 +237,9 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.label9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label9.Location = new System.Drawing.Point(280, 296);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Location = new System.Drawing.Point(373, 364);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(40, 24);
+            this.label9.Size = new System.Drawing.Size(52, 29);
             this.label9.TabIndex = 79;
             this.label9.Text = "520";
             // 
@@ -255,10 +248,9 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.label10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label10.Location = new System.Drawing.Point(400, 296);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Location = new System.Drawing.Point(533, 364);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(40, 24);
+            this.label10.Size = new System.Drawing.Size(52, 29);
             this.label10.TabIndex = 81;
             this.label10.Text = "260";
             // 
@@ -268,10 +260,9 @@
             this.label11.BackColor = System.Drawing.SystemColors.HighlightText;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.label11.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label11.Location = new System.Drawing.Point(380, 262);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Location = new System.Drawing.Point(507, 322);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(85, 24);
+            this.label11.Size = new System.Drawing.Size(106, 29);
             this.label11.TabIndex = 80;
             this.label11.Text = "Econmic";
             // 
@@ -303,10 +294,10 @@
             // 
             this.ShowTrips.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
             this.ShowTrips.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.ShowTrips.Location = new System.Drawing.Point(239, 382);
-            this.ShowTrips.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ShowTrips.Location = new System.Drawing.Point(319, 470);
+            this.ShowTrips.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ShowTrips.Name = "ShowTrips";
-            this.ShowTrips.Size = new System.Drawing.Size(140, 40);
+            this.ShowTrips.Size = new System.Drawing.Size(187, 49);
             this.ShowTrips.TabIndex = 84;
             this.ShowTrips.Text = "Show All Trips";
             this.ShowTrips.UseVisualStyleBackColor = true;
@@ -317,30 +308,28 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(49, 337);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(65, 415);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(150, 24);
+            this.label2.Size = new System.Drawing.Size(193, 29);
             this.label2.TabIndex = 85;
             this.label2.Text = "Number of Seats";
             // 
-            // NumOfSeats
+            // NumofSeats
             // 
-            this.NumOfSeats.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.NumOfSeats.Location = new System.Drawing.Point(224, 335);
-            this.NumOfSeats.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.NumOfSeats.Name = "NumOfSeats";
-            this.NumOfSeats.Size = new System.Drawing.Size(306, 29);
-            this.NumOfSeats.TabIndex = 86;
+            this.NumofSeats.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.5F);
+            this.NumofSeats.Location = new System.Drawing.Point(299, 415);
+            this.NumofSeats.Name = "NumofSeats";
+            this.NumofSeats.Size = new System.Drawing.Size(407, 33);
+            this.NumofSeats.TabIndex = 87;
             // 
             // BookingForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InfoText;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(601, 431);
-            this.Controls.Add(this.NumOfSeats);
+            this.ClientSize = new System.Drawing.Size(801, 530);
+            this.Controls.Add(this.NumofSeats);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.ShowTrips);
             this.Controls.Add(this.label10);
@@ -358,7 +347,7 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.DepatureTime);
             this.Controls.Add(this.label4);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "BookingForm";
             this.Text = "BookingScreen";
             ((System.ComponentModel.ISupportInitialize)(this.trainBookingDataSet)).EndInit();
@@ -367,6 +356,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.bookingDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trainBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trainBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NumofSeats)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -398,6 +388,6 @@
         private System.Windows.Forms.BindingSource trainBindingSource1;
         private System.Windows.Forms.Button ShowTrips;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox NumOfSeats;
+        private System.Windows.Forms.NumericUpDown NumofSeats;
     }
 }
