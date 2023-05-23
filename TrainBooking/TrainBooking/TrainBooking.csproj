@@ -88,6 +88,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TrainBookingDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="TrainBookingDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TrainBookingDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Trip.cs" />
     <Compile Include="Customer.cs" />
     <Compile Include="DBConnection.cs" />
@@ -263,6 +268,17 @@
     </None>
     <None Include="TrainBookingDataSet1.xss">
       <DependentUpon>TrainBookingDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="TrainBookingDataSet2.xsc">
+      <DependentUpon>TrainBookingDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="TrainBookingDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TrainBookingDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TrainBookingDataSet2.xss">
+      <DependentUpon>TrainBookingDataSet2.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

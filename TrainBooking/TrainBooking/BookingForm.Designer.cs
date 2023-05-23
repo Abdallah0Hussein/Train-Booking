@@ -36,7 +36,6 @@
             this.ArrivalTime = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.DepatureTime = new System.Windows.Forms.DateTimePicker();
-            this.Booking = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.TicketType = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -155,18 +154,6 @@
             this.DepatureTime.Size = new System.Drawing.Size(407, 34);
             this.DepatureTime.TabIndex = 61;
             this.DepatureTime.Value = new System.DateTime(2023, 5, 19, 9, 55, 39, 0);
-            // 
-            // Booking
-            // 
-            this.Booking.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
-            this.Booking.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.Booking.Location = new System.Drawing.Point(297, 514);
-            this.Booking.Name = "Booking";
-            this.Booking.Size = new System.Drawing.Size(187, 49);
-            this.Booking.TabIndex = 60;
-            this.Booking.Text = "Book";
-            this.Booking.UseVisualStyleBackColor = true;
-            this.Booking.Click += new System.EventHandler(this.Booking_Click);
             // 
             // label4
             // 
@@ -348,7 +335,6 @@
             this.Controls.Add(this.ArrivalTime);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.DepatureTime);
-            this.Controls.Add(this.Booking);
             this.Controls.Add(this.label4);
             this.Name = "BookingForm";
             this.Text = "BookingScreen";
@@ -373,7 +359,6 @@
         private System.Windows.Forms.DateTimePicker ArrivalTime;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker DepatureTime;
-        private System.Windows.Forms.Button Booking;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox TicketType;
         private System.Windows.Forms.Label label1;

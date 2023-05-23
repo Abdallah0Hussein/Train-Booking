@@ -17,7 +17,7 @@ namespace TrainBooking
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             /*Application.Run(new HomeForm());*/
-            Application.Run(new ShowTripsFrom());
+            Application.Run(new BookingForm());
         }
     }
 }

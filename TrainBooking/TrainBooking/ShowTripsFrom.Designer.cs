@@ -29,69 +29,29 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.tripIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.departureTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.arrivalTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tripBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.trainBookingDataSet1 = new TrainBooking.TrainBookingDataSet1();
             this.tripTableAdapter = new TrainBooking.TrainBookingDataSet1TableAdapters.TripTableAdapter();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.capacityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.trainBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.trainTableAdapter = new TrainBooking.TrainBookingDataSet1TableAdapters.TrainTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.trainBookingDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Booking = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.TripID = new System.Windows.Forms.TextBox();
+            this.stationBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.trainBookingDataSet2 = new TrainBooking.TrainBookingDataSet2();
+            this.stationBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.stationTableAdapter = new TrainBooking.TrainBookingDataSet2TableAdapters.StationTableAdapter();
+            this.dataGridView4 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.tripBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trainBookingDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trainBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trainBookingDataSet1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stationBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trainBookingDataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stationBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.tripIDDataGridViewTextBoxColumn,
-            this.departureTimeDataGridViewTextBoxColumn,
-            this.arrivalTimeDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.tripBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(-56, 1);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(542, 150);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // tripIDDataGridViewTextBoxColumn
-            // 
-            this.tripIDDataGridViewTextBoxColumn.DataPropertyName = "TripID";
-            this.tripIDDataGridViewTextBoxColumn.HeaderText = "TripID";
-            this.tripIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.tripIDDataGridViewTextBoxColumn.Name = "tripIDDataGridViewTextBoxColumn";
-            this.tripIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.tripIDDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // departureTimeDataGridViewTextBoxColumn
-            // 
-            this.departureTimeDataGridViewTextBoxColumn.DataPropertyName = "DepartureTime";
-            this.departureTimeDataGridViewTextBoxColumn.HeaderText = "DepartureTime";
-            this.departureTimeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.departureTimeDataGridViewTextBoxColumn.Name = "departureTimeDataGridViewTextBoxColumn";
-            this.departureTimeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.departureTimeDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // arrivalTimeDataGridViewTextBoxColumn
-            // 
-            this.arrivalTimeDataGridViewTextBoxColumn.DataPropertyName = "ArrivalTime";
-            this.arrivalTimeDataGridViewTextBoxColumn.HeaderText = "ArrivalTime";
-            this.arrivalTimeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.arrivalTimeDataGridViewTextBoxColumn.Name = "arrivalTimeDataGridViewTextBoxColumn";
-            this.arrivalTimeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.arrivalTimeDataGridViewTextBoxColumn.Width = 125;
             // 
             // tripBindingSource
             // 
@@ -107,34 +67,6 @@
             // 
             this.tripTableAdapter.ClearBeforeFill = true;
             // 
-            // dataGridView2
-            // 
-            this.dataGridView2.AllowUserToAddRows = false;
-            this.dataGridView2.AllowUserToDeleteRows = false;
-            this.dataGridView2.AutoGenerateColumns = false;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.capacityDataGridViewTextBoxColumn});
-            this.dataGridView2.DataSource = this.trainBindingSource;
-            this.dataGridView2.Location = new System.Drawing.Point(485, 1);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dataGridView2.RowHeadersVisible = false;
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(221, 150);
-            this.dataGridView2.TabIndex = 1;
-            // 
-            // capacityDataGridViewTextBoxColumn
-            // 
-            this.capacityDataGridViewTextBoxColumn.DataPropertyName = "Capacity";
-            this.capacityDataGridViewTextBoxColumn.HeaderText = "Capacity";
-            this.capacityDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.capacityDataGridViewTextBoxColumn.Name = "capacityDataGridViewTextBoxColumn";
-            this.capacityDataGridViewTextBoxColumn.ReadOnly = true;
-            this.capacityDataGridViewTextBoxColumn.Width = 125;
-            // 
             // trainBindingSource
             // 
             this.trainBindingSource.DataMember = "Train";
@@ -144,38 +76,114 @@
             // 
             this.trainTableAdapter.ClearBeforeFill = true;
             // 
+            // trainBookingDataSet1BindingSource
+            // 
+            this.trainBookingDataSet1BindingSource.DataSource = this.trainBookingDataSet1;
+            this.trainBookingDataSet1BindingSource.Position = 0;
+            // 
+            // Booking
+            // 
+            this.Booking.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
+            this.Booking.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.Booking.Location = new System.Drawing.Point(447, 474);
+            this.Booking.Name = "Booking";
+            this.Booking.Size = new System.Drawing.Size(187, 49);
+            this.Booking.TabIndex = 61;
+            this.Booking.Text = "Book";
+            this.Booking.UseVisualStyleBackColor = true;
+            this.Booking.Click += new System.EventHandler(this.Booking_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label2.Location = new System.Drawing.Point(295, 398);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(80, 29);
+            this.label2.TabIndex = 74;
+            this.label2.Text = "TripID";
+            // 
+            // TripID
+            // 
+            this.TripID.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.TripID.Location = new System.Drawing.Point(447, 393);
+            this.TripID.Name = "TripID";
+            this.TripID.Size = new System.Drawing.Size(419, 34);
+            this.TripID.TabIndex = 83;
+            // 
+            // stationBindingSource1
+            // 
+            this.stationBindingSource1.DataMember = "Station";
+            this.stationBindingSource1.DataSource = this.trainBookingDataSet2;
+            // 
+            // trainBookingDataSet2
+            // 
+            this.trainBookingDataSet2.DataSetName = "TrainBookingDataSet2";
+            this.trainBookingDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // stationBindingSource
+            // 
+            this.stationBindingSource.DataMember = "Station";
+            this.stationBindingSource.DataSource = this.trainBookingDataSet2;
+            // 
+            // stationTableAdapter
+            // 
+            this.stationTableAdapter.ClearBeforeFill = true;
+            // 
+            // dataGridView4
+            // 
+            this.dataGridView4.AllowUserToAddRows = false;
+            this.dataGridView4.AllowUserToDeleteRows = false;
+            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView4.Location = new System.Drawing.Point(0, 1);
+            this.dataGridView4.Name = "dataGridView4";
+            this.dataGridView4.ReadOnly = true;
+            this.dataGridView4.RowHeadersWidth = 51;
+            this.dataGridView4.RowTemplate.Height = 24;
+            this.dataGridView4.Size = new System.Drawing.Size(1140, 353);
+            this.dataGridView4.TabIndex = 84;
+            // 
             // ShowTripsFrom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.ClientSize = new System.Drawing.Size(711, 450);
-            this.Controls.Add(this.dataGridView2);
-            this.Controls.Add(this.dataGridView1);
+            this.ClientSize = new System.Drawing.Size(1152, 535);
+            this.Controls.Add(this.dataGridView4);
+            this.Controls.Add(this.TripID);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.Booking);
             this.Name = "ShowTripsFrom";
             this.Text = "ShowTripsFrom";
             this.Load += new System.EventHandler(this.ShowTripsFrom_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tripBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trainBookingDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trainBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trainBookingDataSet1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stationBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trainBookingDataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stationBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dataGridView1;
         private TrainBookingDataSet1 trainBookingDataSet1;
         private System.Windows.Forms.BindingSource tripBindingSource;
         private TrainBookingDataSet1TableAdapters.TripTableAdapter tripTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tripIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn departureTimeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn arrivalTimeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.BindingSource trainBindingSource;
         private TrainBookingDataSet1TableAdapters.TrainTableAdapter trainTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn capacityDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource trainBookingDataSet1BindingSource;
+        private TrainBookingDataSet2 trainBookingDataSet2;
+        private System.Windows.Forms.BindingSource stationBindingSource;
+        private TrainBookingDataSet2TableAdapters.StationTableAdapter stationTableAdapter;
+        private System.Windows.Forms.BindingSource stationBindingSource1;
+        private System.Windows.Forms.Button Booking;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox TripID;
+        private System.Windows.Forms.DataGridView dataGridView4;
     }
 }
