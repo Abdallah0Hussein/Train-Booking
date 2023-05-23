@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ShowTripsFrom));
             this.tripBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.trainBookingDataSet1 = new TrainBooking.TrainBookingDataSet1();
             this.tripTableAdapter = new TrainBooking.TrainBookingDataSet1TableAdapters.TripTableAdapter();
@@ -86,10 +85,10 @@
             // 
             this.Booking.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
             this.Booking.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.Booking.Location = new System.Drawing.Point(335, 385);
-            this.Booking.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Booking.Location = new System.Drawing.Point(447, 474);
+            this.Booking.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Booking.Name = "Booking";
-            this.Booking.Size = new System.Drawing.Size(140, 40);
+            this.Booking.Size = new System.Drawing.Size(187, 49);
             this.Booking.TabIndex = 61;
             this.Booking.Text = "Book";
             this.Booking.UseVisualStyleBackColor = true;
@@ -100,20 +99,19 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(221, 323);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(295, 398);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 24);
+            this.label2.Size = new System.Drawing.Size(80, 29);
             this.label2.TabIndex = 74;
             this.label2.Text = "TripID";
             // 
             // TripID
             // 
             this.TripID.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.TripID.Location = new System.Drawing.Point(335, 319);
-            this.TripID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TripID.Location = new System.Drawing.Point(447, 393);
+            this.TripID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TripID.Name = "TripID";
-            this.TripID.Size = new System.Drawing.Size(315, 29);
+            this.TripID.Size = new System.Drawing.Size(419, 34);
             this.TripID.TabIndex = 83;
             // 
             // stationBindingSource1
@@ -141,26 +139,25 @@
             this.dataGridView4.AllowUserToDeleteRows = false;
             this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView4.Location = new System.Drawing.Point(0, 1);
-            this.dataGridView4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView4.Name = "dataGridView4";
             this.dataGridView4.ReadOnly = true;
             this.dataGridView4.RowHeadersWidth = 51;
             this.dataGridView4.RowTemplate.Height = 24;
-            this.dataGridView4.Size = new System.Drawing.Size(855, 287);
+            this.dataGridView4.Size = new System.Drawing.Size(1140, 353);
             this.dataGridView4.TabIndex = 84;
             // 
             // ShowTripsFrom
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(864, 435);
+            this.BackColor = System.Drawing.SystemColors.Highlight;
+            this.ClientSize = new System.Drawing.Size(1152, 535);
             this.Controls.Add(this.dataGridView4);
             this.Controls.Add(this.TripID);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Booking);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ShowTripsFrom";
             this.Text = "ShowTripsFrom";
             this.Load += new System.EventHandler(this.ShowTripsFrom_Load);

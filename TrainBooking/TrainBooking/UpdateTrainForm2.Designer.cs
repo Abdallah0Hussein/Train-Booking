@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UpdateTrainForm2));
             this.Title = new System.Windows.Forms.Label();
             this.UpdateTrain = new System.Windows.Forms.Button();
             this.TrainCapacity = new System.Windows.Forms.TextBox();
@@ -145,8 +144,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackColor = System.Drawing.SystemColors.Highlight;
             this.ClientSize = new System.Drawing.Size(560, 366);
             this.Controls.Add(this.TrainID);
             this.Controls.Add(this.label3);
