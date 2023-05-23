@@ -101,3 +101,5 @@ C:\Users\miree\OneDrive\المستندات\GitHub\Train-Booking\TrainBooking\Tra
 F:\DataBase Project\TrainBooking\TrainBooking\obj\Debug\TrainBooking.ShowTripsFrom.resources
 F:\level two\Second Semster\Software1\Github\Train-Booking\TrainBooking\TrainBooking\obj\Debug\TrainBooking.ShowTripsFrom.resources
 F:\level two\Second Semster\Software1\Github\Train-Booking\TrainBooking\TrainBooking\obj\Debug\TrainBooking.ListBopking.resources
+F:\DataBase Project\TrainBooking\TrainBooking\obj\Debug\TrainBooking.ShowTicketForm.resources
+F:\DataBase Project\TrainBooking\TrainBooking\obj\Debug\TrainBooking.ListBookingForm.resources

@@ -1,13 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Net.Sockets;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TrainBooking
@@ -18,7 +11,6 @@ namespace TrainBooking
         public DateTime ATime { get; set; }
         public string SStaion { get; set; }
         public string DStation { get; set; }
-        public int ticketID { get; set; }
         public string TicketType { get; set; }
 
         public ShowTripsFrom()
@@ -42,7 +34,8 @@ namespace TrainBooking
             DataTable table1 = new DataTable();
 
             // Retrieve the desired attributes from the Station table for "Source" column
-            string sourceQuery = "SELECT Trip.TripID, Driver.Name as DriverName, Trip.DepartureTime, Trip.ArrivalTime, SourceStation.Name AS Source, DestinationStation.Name AS Destination FROM Trip JOIN Station AS SourceStation ON Trip.TripID = SourceStation.TripID AND SourceStation.station_type = 'Source' JOIN Station AS DestinationStation ON Trip.TripID = DestinationStation.TripID AND DestinationStation.station_type = 'Destination' JOIN Driver ON Trip.DriverID = Driver.DriverID";
+            string sourceQuery = "SELECT Trip.TripID, Driver.Name as DriverName, Trip.DepartureTime, Trip.ArrivalTime, SourceStation.Name AS Source, DestinationStation.Name AS Destination FROM Trip JOIN Station AS SourceStation ON Trip.TripID = SourceStation.TripID AND SourceStation.station_type = 'Source' JOIN Station AS DestinationStation ON Trip.TripID = DestinationStation.TripID AND DestinationStation.station_type = 'Destination' JOIN Driver ON Trip.DriverID = Driver.DriverID WHERE SourceStation.Name = '" + SStaion + "' AND DestinationStation.Name = '" + DStation + "'";
+
 
 
             SqlDataAdapter sqlDaSource = new SqlDataAdapter(sourceQuery, connection);
@@ -60,32 +53,39 @@ namespace TrainBooking
             SqlConnection connection = conn.ConnectToDatabase();
 
             Booking Bk = new Booking();
-            DateTime departureTime = DTime;
+            /* DateTime departureTime = DTime;*/
+            /*DateTime arrivalTime = ATime;*/
             int PassengerID = Customer.cus.CustomerID;
-            int TicketNumber = 2;
-            Booking bookingattribuits = new Booking();
-            bookingattribuits.AddBooking(connection, PassengerID, TicketNumber, departureTime);
+            int TicketNumber = Bk.getTicketNumber(connection) + 1;
 
 
 
+            DateTime currentDateTime = DateTime.Now;
 
             string Type = TicketType;
             if (Type == "VIP Ticket")
             {
                 decimal price = 520;
-                int TripID = 5;
-                Bk.AddTicket(connection, PassengerID, TripID, Type, price);
-                int seatNumber = Bk.UpdateSeatNumber(connection, TripID);
-                Bk.UpdateTicket(connection, PassengerID, TripID, seatNumber);
+                int tripID = int.Parse(TripID.Text);
+                Bk.AddTicket(connection, PassengerID, tripID, Type, price);
+                Bk.AddBooking(connection, PassengerID, TicketNumber, currentDateTime);
+                int seatNumber = Bk.UpdateSeatNumber(connection, tripID);
+                Bk.UpdateTicket(connection, PassengerID, tripID, seatNumber);
             }
             else if (Type == "Econmic Ticket")
             {
                 decimal price = 260;
                 int tripID = int.Parse(TripID.Text);
                 Bk.AddTicket(connection, PassengerID, tripID, Type, price);
+                Bk.AddBooking(connection, PassengerID, TicketNumber, currentDateTime);
                 int seatNumber = Bk.UpdateSeatNumber(connection, tripID);
                 Bk.UpdateTicket(connection, PassengerID, tripID, seatNumber);
             }
+
+            MessageBox.Show("The Booking is done!");
+            ShowTicketForm TicketForm = new ShowTicketForm();
+            TicketForm.TicketNum = TicketNumber;
+            TicketForm.ShowDialog();
         }
 
     }

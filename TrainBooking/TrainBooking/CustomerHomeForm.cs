@@ -33,7 +33,7 @@ namespace TrainBooking
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            ListBopking listBopking = new ListBopking();
+            ListBookingForm listBopking = new ListBookingForm();
             listBopking.ShowDialog();
         }
     }
