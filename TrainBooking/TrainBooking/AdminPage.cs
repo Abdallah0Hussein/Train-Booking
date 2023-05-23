@@ -40,5 +40,11 @@ namespace TrainBooking
             UpdateTripForm1 updateTripForm = new UpdateTripForm1();
             updateTripForm.ShowDialog();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ReportForm reportForm = new ReportForm();
+            reportForm.ShowDialog();
+        }
     }
 }

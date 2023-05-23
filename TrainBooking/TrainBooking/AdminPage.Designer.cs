@@ -34,6 +34,7 @@
             this.UpdateTrainLink = new System.Windows.Forms.Button();
             this.AddTripLink = new System.Windows.Forms.Button();
             this.UpdateTripLink = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -51,7 +52,7 @@
             // 
             this.AddTrainLink.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
             this.AddTrainLink.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.AddTrainLink.Location = new System.Drawing.Point(12, 128);
+            this.AddTrainLink.Location = new System.Drawing.Point(12, 87);
             this.AddTrainLink.Name = "AddTrainLink";
             this.AddTrainLink.Size = new System.Drawing.Size(237, 73);
             this.AddTrainLink.TabIndex = 1;
@@ -75,7 +76,7 @@
             // 
             this.AddTripLink.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
             this.AddTripLink.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.AddTripLink.Location = new System.Drawing.Point(361, 128);
+            this.AddTripLink.Location = new System.Drawing.Point(359, 87);
             this.AddTripLink.Name = "AddTripLink";
             this.AddTripLink.Size = new System.Drawing.Size(237, 73);
             this.AddTripLink.TabIndex = 3;
@@ -95,6 +96,18 @@
             this.UpdateTripLink.UseVisualStyleBackColor = true;
             this.UpdateTripLink.Click += new System.EventHandler(this.UpdateTripLink_Click);
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
+            this.button1.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.button1.Location = new System.Drawing.Point(185, 177);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(237, 73);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Report Public";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // AdminPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -102,6 +115,7 @@
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(608, 364);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.UpdateTripLink);
             this.Controls.Add(this.AddTripLink);
             this.Controls.Add(this.UpdateTrainLink);
@@ -122,5 +136,6 @@
         private System.Windows.Forms.Button UpdateTrainLink;
         private System.Windows.Forms.Button AddTripLink;
         private System.Windows.Forms.Button UpdateTripLink;
+        private System.Windows.Forms.Button button1;
     }
 }
