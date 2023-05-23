@@ -22,6 +22,7 @@ namespace TrainBooking
             showTripsFrom.DStation = DestStation.Text;
             showTripsFrom.TicketType = TicketType.Text;
             showTripsFrom.NumofSeats = (int) NumofSeats.Value;
+
             showTripsFrom.ShowDialog();
         }
     }

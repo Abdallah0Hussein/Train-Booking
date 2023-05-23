@@ -294,7 +294,7 @@
             // 
             this.ShowTrips.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
             this.ShowTrips.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.ShowTrips.Location = new System.Drawing.Point(319, 470);
+            this.ShowTrips.Location = new System.Drawing.Point(342, 470);
             this.ShowTrips.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ShowTrips.Name = "ShowTrips";
             this.ShowTrips.Size = new System.Drawing.Size(187, 49);

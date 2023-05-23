@@ -79,35 +79,43 @@ namespace TrainBooking
             TrainCapacity = (int)command.ExecuteScalar();
             
             DateTime currentDateTime = DateTime.Now;
-
+            int seatNumber = Bk.UpdateSeatNumber(connection, tripID);
             string Type = TicketType;
-            if (Type == "VIP Ticket")
+
+            if (TrainCapacity >= seatNumber + NumofSeats)
             {
-                decimal price = 520;
-
-                for (int i = 0; i < this.NumofSeats; i++)
+                if (Type == "VIP Ticket")
                 {
-                    Bk.AddTicket(connection, PassengerID, tripID, Type, price);
-                    Bk.AddBooking(connection, PassengerID, TicketNumber, currentDateTime);
-                    int seatNumber = Bk.UpdateSeatNumber(connection, tripID);
-                    Bk.UpdateTicket(connection, PassengerID, tripID, seatNumber, intializeLastTicket() - 1);
-                }
+                    decimal price = 520;
 
+                    for (int i = 0; i < this.NumofSeats; i++)
+                    {
+                        Bk.AddTicket(connection, PassengerID, tripID, Type, price);
+                        Bk.AddBooking(connection, PassengerID, TicketNumber, currentDateTime);
+                        seatNumber = Bk.UpdateSeatNumber(connection, tripID);
+                        Bk.UpdateTicket(connection, PassengerID, tripID, seatNumber, intializeLastTicket() - 1);
+                    }
+
+                }
+                else if (Type == "Econmic Ticket")
+                {
+                    decimal price = 260;
+
+                    for (int i = 0; i < this.NumofSeats; i++)
+                    {
+                        Bk.AddTicket(connection, PassengerID, tripID, Type, price);
+                        Bk.AddBooking(connection, PassengerID, TicketNumber, currentDateTime);
+                        seatNumber = Bk.UpdateSeatNumber(connection, tripID);
+                        Bk.UpdateTicket(connection, PassengerID, tripID, seatNumber, intializeLastTicket() - 1);
+                    }
+                }
+                MessageBox.Show("The Booking is done!");
             }
-            else if (Type == "Econmic Ticket")
+            else
             {
-                decimal price = 260;
-
-                for (int i = 0; i < this.NumofSeats; i++)
-                {
-                    Bk.AddTicket(connection, PassengerID, tripID, Type, price);
-                    Bk.AddBooking(connection, PassengerID, TicketNumber, currentDateTime);
-                    int seatNumber = Bk.UpdateSeatNumber(connection, tripID);
-                    Bk.UpdateTicket(connection, PassengerID, tripID, seatNumber, intializeLastTicket() - 1);
-                }
+                MessageBox.Show("The Train is Full");
             }
 
-            MessageBox.Show("The Booking is done!");
             ShowTicketForm TicketForm = new ShowTicketForm();
             TicketForm.TicketNum = TicketNumber;
             TicketForm.ShowDialog();

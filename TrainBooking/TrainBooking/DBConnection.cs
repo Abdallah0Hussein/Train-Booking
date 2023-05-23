@@ -18,7 +18,6 @@ namespace TrainBooking
             try
             {
                 connection.Open();
-                MessageBox.Show("Connection to DB is successful!");
             }
             catch (Exception ex)
             {
