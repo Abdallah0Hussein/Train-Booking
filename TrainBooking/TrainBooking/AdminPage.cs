@@ -43,8 +43,10 @@ namespace TrainBooking
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ReportForm reportForm = new ReportForm();
-            reportForm.ShowDialog();
+            /*ReportForm reportForm = new ReportForm();
+            reportForm.ShowDialog();*/
+            ReportForm2 reportForm2 = new ReportForm2();
+            reportForm2.ShowDialog();
         }
     }
 }

@@ -28,11 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.SendTrainID = new System.Windows.Forms.Button();
             this.nTrainID = new System.Windows.Forms.NumericUpDown();
+            this.TrainIDErr = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.nTrainID)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TrainIDErr)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -64,7 +67,7 @@
             // 
             this.SendTrainID.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
             this.SendTrainID.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.SendTrainID.Location = new System.Drawing.Point(344, 180);
+            this.SendTrainID.Location = new System.Drawing.Point(332, 182);
             this.SendTrainID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SendTrainID.Name = "SendTrainID";
             this.SendTrainID.Size = new System.Drawing.Size(187, 49);
@@ -82,12 +85,16 @@
             this.nTrainID.Size = new System.Drawing.Size(275, 34);
             this.nTrainID.TabIndex = 0;
             // 
+            // TrainIDErr
+            // 
+            this.TrainIDErr.ContainerControl = this;
+            // 
             // UpdateTrainForm1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Highlight;
-            this.ClientSize = new System.Drawing.Size(545, 242);
+            this.ClientSize = new System.Drawing.Size(581, 242);
             this.Controls.Add(this.nTrainID);
             this.Controls.Add(this.SendTrainID);
             this.Controls.Add(this.label1);
@@ -96,6 +103,7 @@
             this.Name = "UpdateTrainForm1";
             this.Text = "Update a Train";
             ((System.ComponentModel.ISupportInitialize)(this.nTrainID)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TrainIDErr)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -106,5 +114,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button SendTrainID;
         private System.Windows.Forms.NumericUpDown nTrainID;
+        private System.Windows.Forms.ErrorProvider TrainIDErr;
     }
 }

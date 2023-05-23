@@ -11,14 +11,24 @@ namespace TrainBooking
         {
             InitializeComponent();
         }
-
+        
         private void SendTrainID_Click(object sender, EventArgs e)
         {
             trainID = (int)nTrainID.Value;
-           
-            UpdateTrainForm2 form2 = new UpdateTrainForm2();
-            form2.TID = trainID;
-            form2.ShowDialog();
+            DBConnection conn = new DBConnection();
+            SqlConnection connection = conn.ConnectToDatabase();
+            if (Train.validateID(connection, trainID))
+            {
+                UpdateTrainForm2 form2 = new UpdateTrainForm2();
+                form2.TID = trainID;
+                form2.ShowDialog();
+            }
+            else
+            {
+                TrainIDErr.SetError(nTrainID, "This Train Does not Exist In the System");
+                MessageBox.Show("This Train Does not Exist In the System");
+            }
+            
             
         }
     }

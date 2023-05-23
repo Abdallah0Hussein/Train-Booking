@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.ReportingServices.Diagnostics.Internal;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Windows.Forms;
@@ -26,6 +27,14 @@ namespace TrainBooking
         public Train GetTrain()
         {
             return this;
+        }
+        public static bool validateID(SqlConnection connection, int ID)
+        {
+            SqlCommand command = new SqlCommand("SELECT COUNT(*) FROM [Train] WHERE TrainID = @ID", connection);
+            command.Parameters.AddWithValue("@ID", ID);
+
+            int count = (int)command.ExecuteScalar();
+            return count == 1;
         }
     }
 
