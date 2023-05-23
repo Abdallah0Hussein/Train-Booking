@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddTrainForm));
             this.label4 = new System.Windows.Forms.Label();
             this.TrainStatus = new System.Windows.Forms.TextBox();
             this.TrainName = new System.Windows.Forms.TextBox();
@@ -43,7 +44,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Tai Le", 22F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(37, 39);
+            this.label4.Location = new System.Drawing.Point(32, 26);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(222, 48);
             this.label4.TabIndex = 8;
@@ -53,7 +54,7 @@
             // TrainStatus
             // 
             this.TrainStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.TrainStatus.Location = new System.Drawing.Point(183, 195);
+            this.TrainStatus.Location = new System.Drawing.Point(178, 182);
             this.TrainStatus.Name = "TrainStatus";
             this.TrainStatus.PasswordChar = '*';
             this.TrainStatus.Size = new System.Drawing.Size(316, 34);
@@ -62,7 +63,7 @@
             // TrainName
             // 
             this.TrainName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.TrainName.Location = new System.Drawing.Point(183, 133);
+            this.TrainName.Location = new System.Drawing.Point(178, 120);
             this.TrainName.Name = "TrainName";
             this.TrainName.Size = new System.Drawing.Size(316, 34);
             this.TrainName.TabIndex = 11;
@@ -72,7 +73,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(60, 195);
+            this.label2.Location = new System.Drawing.Point(55, 182);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(79, 29);
             this.label2.TabIndex = 10;
@@ -83,7 +84,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(61, 136);
+            this.label1.Location = new System.Drawing.Point(56, 123);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(78, 29);
             this.label1.TabIndex = 9;
@@ -92,7 +93,7 @@
             // TrainCapacity
             // 
             this.TrainCapacity.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.TrainCapacity.Location = new System.Drawing.Point(183, 260);
+            this.TrainCapacity.Location = new System.Drawing.Point(178, 247);
             this.TrainCapacity.Name = "TrainCapacity";
             this.TrainCapacity.Size = new System.Drawing.Size(316, 34);
             this.TrainCapacity.TabIndex = 15;
@@ -102,7 +103,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(61, 260);
+            this.label5.Location = new System.Drawing.Point(56, 247);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(105, 29);
             this.label5.TabIndex = 13;
@@ -112,7 +113,7 @@
             // 
             this.AddTrain.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
             this.AddTrain.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.AddTrain.Location = new System.Drawing.Point(183, 338);
+            this.AddTrain.Location = new System.Drawing.Point(178, 325);
             this.AddTrain.Name = "AddTrain";
             this.AddTrain.Size = new System.Drawing.Size(187, 49);
             this.AddTrain.TabIndex = 16;
@@ -125,7 +126,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.ClientSize = new System.Drawing.Size(559, 437);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(523, 387);
             this.Controls.Add(this.AddTrain);
             this.Controls.Add(this.TrainCapacity);
             this.Controls.Add(this.label5);

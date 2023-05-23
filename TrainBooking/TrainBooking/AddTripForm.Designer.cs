@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddTripForm));
             this.AddTrip = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -59,7 +60,7 @@
             // 
             this.AddTrip.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
             this.AddTrip.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.AddTrip.Location = new System.Drawing.Point(246, 559);
+            this.AddTrip.Location = new System.Drawing.Point(249, 520);
             this.AddTrip.Name = "AddTrip";
             this.AddTrip.Size = new System.Drawing.Size(187, 49);
             this.AddTrip.TabIndex = 24;
@@ -72,7 +73,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(65, 257);
+            this.label4.Location = new System.Drawing.Point(66, 244);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(174, 29);
             this.label4.TabIndex = 22;
@@ -83,7 +84,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(64, 192);
+            this.label3.Location = new System.Drawing.Point(65, 179);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(100, 29);
             this.label3.TabIndex = 19;
@@ -94,7 +95,7 @@
             this.lablel.AutoSize = true;
             this.lablel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.lablel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lablel.Location = new System.Drawing.Point(65, 133);
+            this.lablel.Location = new System.Drawing.Point(66, 120);
             this.lablel.Name = "lablel";
             this.lablel.Size = new System.Drawing.Size(92, 29);
             this.lablel.TabIndex = 18;
@@ -105,7 +106,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 22F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(41, 36);
+            this.label1.Location = new System.Drawing.Point(42, 23);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(203, 48);
             this.label1.TabIndex = 17;
@@ -118,7 +119,7 @@
             this.DepartureTime.CustomFormat = "dd / MM / yyyy  hh:mm tt";
             this.DepartureTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.DepartureTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.DepartureTime.Location = new System.Drawing.Point(299, 257);
+            this.DepartureTime.Location = new System.Drawing.Point(300, 244);
             this.DepartureTime.Name = "DepartureTime";
             this.DepartureTime.Size = new System.Drawing.Size(324, 34);
             this.DepartureTime.TabIndex = 25;
@@ -130,7 +131,7 @@
             this.ArrivalTime.CustomFormat = "dd / MM / yyyy  hh:mm tt";
             this.ArrivalTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.ArrivalTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.ArrivalTime.Location = new System.Drawing.Point(299, 324);
+            this.ArrivalTime.Location = new System.Drawing.Point(300, 311);
             this.ArrivalTime.Name = "ArrivalTime";
             this.ArrivalTime.Size = new System.Drawing.Size(324, 34);
             this.ArrivalTime.TabIndex = 27;
@@ -141,7 +142,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(65, 324);
+            this.label5.Location = new System.Drawing.Point(66, 311);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(142, 29);
             this.label5.TabIndex = 26;
@@ -152,7 +153,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label6.Location = new System.Drawing.Point(65, 392);
+            this.label6.Location = new System.Drawing.Point(66, 379);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(170, 29);
             this.label6.TabIndex = 28;
@@ -161,7 +162,7 @@
             // TrainID
             // 
             this.TrainID.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.TrainID.Location = new System.Drawing.Point(299, 128);
+            this.TrainID.Location = new System.Drawing.Point(300, 115);
             this.TrainID.Name = "TrainID";
             this.TrainID.Size = new System.Drawing.Size(324, 34);
             this.TrainID.TabIndex = 32;
@@ -169,7 +170,7 @@
             // DriverID
             // 
             this.DriverID.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.DriverID.Location = new System.Drawing.Point(299, 190);
+            this.DriverID.Location = new System.Drawing.Point(300, 177);
             this.DriverID.Name = "DriverID";
             this.DriverID.Size = new System.Drawing.Size(324, 34);
             this.DriverID.TabIndex = 33;
@@ -179,7 +180,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.label8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label8.Location = new System.Drawing.Point(64, 467);
+            this.label8.Location = new System.Drawing.Point(65, 454);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(213, 29);
             this.label8.TabIndex = 34;
@@ -200,7 +201,7 @@
             "Riggs Station",
             "Emerald Station",
             "Bacchus Station"});
-            this.SrcStation.Location = new System.Drawing.Point(299, 392);
+            this.SrcStation.Location = new System.Drawing.Point(300, 379);
             this.SrcStation.Name = "SrcStation";
             this.SrcStation.Size = new System.Drawing.Size(324, 34);
             this.SrcStation.TabIndex = 38;
@@ -220,7 +221,7 @@
             "Riggs Station",
             "Emerald Station",
             "Bacchus Station"});
-            this.DestStation.Location = new System.Drawing.Point(299, 462);
+            this.DestStation.Location = new System.Drawing.Point(300, 449);
             this.DestStation.Name = "DestStation";
             this.DestStation.Size = new System.Drawing.Size(324, 34);
             this.DestStation.TabIndex = 39;
@@ -246,7 +247,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.ClientSize = new System.Drawing.Size(690, 672);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(693, 581);
             this.Controls.Add(this.DestStation);
             this.Controls.Add(this.SrcStation);
             this.Controls.Add(this.label8);

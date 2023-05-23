@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UpdateTrainForm1));
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.SendTrainID = new System.Windows.Forms.Button();
@@ -40,7 +41,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(38, 128);
+            this.label1.Location = new System.Drawing.Point(15, 128);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(167, 29);
             this.label1.TabIndex = 13;
@@ -62,7 +63,7 @@
             // 
             this.SendTrainID.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
             this.SendTrainID.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.SendTrainID.Location = new System.Drawing.Point(344, 210);
+            this.SendTrainID.Location = new System.Drawing.Point(359, 181);
             this.SendTrainID.Name = "SendTrainID";
             this.SendTrainID.Size = new System.Drawing.Size(187, 49);
             this.SendTrainID.TabIndex = 17;
@@ -83,7 +84,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.ClientSize = new System.Drawing.Size(569, 287);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(569, 242);
             this.Controls.Add(this.nTrainID);
             this.Controls.Add(this.SendTrainID);
             this.Controls.Add(this.label1);

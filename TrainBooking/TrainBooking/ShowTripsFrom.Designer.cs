@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ShowTripsFrom));
             this.tripBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.trainBookingDataSet1 = new TrainBooking.TrainBookingDataSet1();
             this.tripTableAdapter = new TrainBooking.TrainBookingDataSet1TableAdapters.TripTableAdapter();
@@ -149,6 +150,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1152, 535);
             this.Controls.Add(this.dataGridView4);
             this.Controls.Add(this.TripID);

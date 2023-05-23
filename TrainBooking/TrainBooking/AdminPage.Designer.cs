@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminPage));
             this.label1 = new System.Windows.Forms.Label();
             this.AddTrainLink = new System.Windows.Forms.Button();
             this.UpdateTrainLink = new System.Windows.Forms.Button();
@@ -40,7 +41,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 19F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(193, 46);
+            this.label1.Location = new System.Drawing.Point(165, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(275, 41);
             this.label1.TabIndex = 0;
@@ -50,7 +51,7 @@
             // 
             this.AddTrainLink.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
             this.AddTrainLink.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.AddTrainLink.Location = new System.Drawing.Point(40, 156);
+            this.AddTrainLink.Location = new System.Drawing.Point(12, 128);
             this.AddTrainLink.Name = "AddTrainLink";
             this.AddTrainLink.Size = new System.Drawing.Size(237, 73);
             this.AddTrainLink.TabIndex = 1;
@@ -62,7 +63,7 @@
             // 
             this.UpdateTrainLink.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
             this.UpdateTrainLink.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.UpdateTrainLink.Location = new System.Drawing.Point(40, 297);
+            this.UpdateTrainLink.Location = new System.Drawing.Point(12, 269);
             this.UpdateTrainLink.Name = "UpdateTrainLink";
             this.UpdateTrainLink.Size = new System.Drawing.Size(237, 73);
             this.UpdateTrainLink.TabIndex = 2;
@@ -74,7 +75,7 @@
             // 
             this.AddTripLink.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
             this.AddTripLink.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.AddTripLink.Location = new System.Drawing.Point(389, 156);
+            this.AddTripLink.Location = new System.Drawing.Point(361, 128);
             this.AddTripLink.Name = "AddTripLink";
             this.AddTripLink.Size = new System.Drawing.Size(237, 73);
             this.AddTripLink.TabIndex = 3;
@@ -86,7 +87,7 @@
             // 
             this.UpdateTripLink.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
             this.UpdateTripLink.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.UpdateTripLink.Location = new System.Drawing.Point(389, 297);
+            this.UpdateTripLink.Location = new System.Drawing.Point(361, 269);
             this.UpdateTripLink.Name = "UpdateTripLink";
             this.UpdateTripLink.Size = new System.Drawing.Size(237, 73);
             this.UpdateTripLink.TabIndex = 4;
@@ -99,7 +100,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.ClientSize = new System.Drawing.Size(684, 444);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(608, 364);
             this.Controls.Add(this.UpdateTripLink);
             this.Controls.Add(this.AddTripLink);
             this.Controls.Add(this.UpdateTrainLink);

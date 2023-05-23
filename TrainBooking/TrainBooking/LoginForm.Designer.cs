@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.LogInButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -41,7 +42,7 @@
             // 
             this.LogInButton.Font = new System.Drawing.Font("Microsoft Tai Le", 13.8F, System.Drawing.FontStyle.Bold);
             this.LogInButton.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.LogInButton.Location = new System.Drawing.Point(194, 223);
+            this.LogInButton.Location = new System.Drawing.Point(346, 359);
             this.LogInButton.Name = "LogInButton";
             this.LogInButton.Size = new System.Drawing.Size(172, 56);
             this.LogInButton.TabIndex = 0;
@@ -54,7 +55,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(42, 84);
+            this.label1.Location = new System.Drawing.Point(194, 220);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(74, 29);
             this.label1.TabIndex = 1;
@@ -65,7 +66,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(42, 138);
+            this.label2.Location = new System.Drawing.Point(194, 274);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(120, 29);
             this.label2.TabIndex = 2;
@@ -74,7 +75,7 @@
             // Email
             // 
             this.Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.Email.Location = new System.Drawing.Point(194, 79);
+            this.Email.Location = new System.Drawing.Point(346, 215);
             this.Email.Name = "Email";
             this.Email.Size = new System.Drawing.Size(316, 34);
             this.Email.TabIndex = 3;
@@ -82,7 +83,7 @@
             // Password
             // 
             this.Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.Password.Location = new System.Drawing.Point(194, 135);
+            this.Password.Location = new System.Drawing.Point(346, 271);
             this.Password.Name = "Password";
             this.Password.PasswordChar = '*';
             this.Password.Size = new System.Drawing.Size(316, 34);
@@ -96,7 +97,7 @@
             this.Type.Items.AddRange(new object[] {
             "Admin",
             "Customer"});
-            this.Type.Location = new System.Drawing.Point(194, 21);
+            this.Type.Location = new System.Drawing.Point(346, 157);
             this.Type.Name = "Type";
             this.Type.Size = new System.Drawing.Size(316, 34);
             this.Type.TabIndex = 5;
@@ -106,7 +107,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(42, 26);
+            this.label3.Location = new System.Drawing.Point(194, 162);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(68, 29);
             this.label3.TabIndex = 6;
@@ -117,7 +118,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.ClientSize = new System.Drawing.Size(568, 318);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(826, 573);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.Type);
             this.Controls.Add(this.Password);

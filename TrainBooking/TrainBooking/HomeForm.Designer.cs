@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomeForm));
             this.Sign_upLink = new System.Windows.Forms.Label();
             this.LogInLink = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -39,7 +40,7 @@
             this.Sign_upLink.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.Sign_upLink.Font = new System.Drawing.Font("Microsoft Tai Le", 14.8F, System.Drawing.FontStyle.Bold);
             this.Sign_upLink.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.Sign_upLink.Location = new System.Drawing.Point(99, 209);
+            this.Sign_upLink.Location = new System.Drawing.Point(193, 298);
             this.Sign_upLink.Name = "Sign_upLink";
             this.Sign_upLink.Padding = new System.Windows.Forms.Padding(21, 12, 21, 12);
             this.Sign_upLink.Size = new System.Drawing.Size(149, 57);
@@ -54,7 +55,7 @@
             this.LogInLink.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.LogInLink.Font = new System.Drawing.Font("Microsoft Tai Le", 14.8F, System.Drawing.FontStyle.Bold);
             this.LogInLink.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.LogInLink.Location = new System.Drawing.Point(373, 209);
+            this.LogInLink.Location = new System.Drawing.Point(582, 298);
             this.LogInLink.Name = "LogInLink";
             this.LogInLink.Padding = new System.Windows.Forms.Padding(30, 12, 30, 12);
             this.LogInLink.Size = new System.Drawing.Size(150, 57);
@@ -68,7 +69,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Tai Le", 19.8F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(97, 58);
+            this.label4.Location = new System.Drawing.Point(226, 133);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(436, 43);
             this.label4.TabIndex = 7;
@@ -80,7 +81,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.ClientSize = new System.Drawing.Size(644, 367);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(901, 598);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.LogInLink);
             this.Controls.Add(this.Sign_upLink);

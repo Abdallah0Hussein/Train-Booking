@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListBookingForm));
             this.button2 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.BookingID = new System.Windows.Forms.TextBox();
@@ -66,7 +67,7 @@
             // BookingID
             // 
             this.BookingID.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.BookingID.Location = new System.Drawing.Point(221, 217);
+            this.BookingID.Location = new System.Drawing.Point(314, 221);
             this.BookingID.Name = "BookingID";
             this.BookingID.Size = new System.Drawing.Size(316, 34);
             this.BookingID.TabIndex = 5;
@@ -76,7 +77,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(66, 222);
+            this.label1.Location = new System.Drawing.Point(159, 226);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(131, 29);
             this.label1.TabIndex = 4;
@@ -85,7 +86,7 @@
             // TicketID
             // 
             this.TicketID.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.TicketID.Location = new System.Drawing.Point(221, 274);
+            this.TicketID.Location = new System.Drawing.Point(314, 278);
             this.TicketID.Name = "TicketID";
             this.TicketID.Size = new System.Drawing.Size(316, 34);
             this.TicketID.TabIndex = 7;
@@ -95,7 +96,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(66, 277);
+            this.label2.Location = new System.Drawing.Point(159, 281);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(108, 29);
             this.label2.TabIndex = 6;
@@ -106,6 +107,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.TicketID);
             this.Controls.Add(this.label2);

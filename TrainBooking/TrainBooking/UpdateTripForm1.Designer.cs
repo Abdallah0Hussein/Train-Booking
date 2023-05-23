@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UpdateTripForm1));
             this.nTripID = new System.Windows.Forms.NumericUpDown();
             this.SendTripID = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -50,7 +51,7 @@
             // 
             this.SendTripID.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
             this.SendTripID.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.SendTripID.Location = new System.Drawing.Point(344, 212);
+            this.SendTripID.Location = new System.Drawing.Point(358, 184);
             this.SendTripID.Name = "SendTripID";
             this.SendTripID.Size = new System.Drawing.Size(187, 49);
             this.SendTripID.TabIndex = 21;
@@ -90,7 +91,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.ClientSize = new System.Drawing.Size(577, 287);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(577, 248);
             this.Controls.Add(this.nTripID);
             this.Controls.Add(this.SendTripID);
             this.Controls.Add(this.label1);
