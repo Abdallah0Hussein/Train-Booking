@@ -43,8 +43,8 @@ namespace TrainBooking
             DBConnection conn = new DBConnection();
             SqlConnection connection = conn.ConnectToDatabase();
             Booking booking = new Booking();
-            int bookingID = int.Parse(BookingID.Text);
-            int ticketnum = int.Parse(TicketID.Text);
+            int bookingID = (int) BookingID.Value;
+            int ticketnum = (int) TicketID.Value;
             booking.DeleteTicket(connection, ticketnum);
             booking.DeleteBooking(connection, bookingID, ticketnum);
             MessageBox.Show("Your Booking is Canceled");

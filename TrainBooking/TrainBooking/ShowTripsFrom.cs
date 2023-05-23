@@ -75,6 +75,7 @@ namespace TrainBooking
             int TicketNumber = Bk.getTicketNumber(connection) + 1;
             int TrainCapacity = 0;
             int tripID = int.Parse(TripID.Text);
+
             SqlCommand command = new SqlCommand($"SELECT Capacity From Train WHERE TrainID = (SELECT TrainID FROM Trip WHERE TripID = {tripID})", connection);
             TrainCapacity = (int)command.ExecuteScalar();
             
@@ -98,9 +99,9 @@ namespace TrainBooking
                         TicketID = Bk.getTicketNumber(connection);
                         Bk.AddTicketToBook(connection, BookingID, TicketID);
                     }
-
+                    Trip.UpdateNumOfPassenger(tripID, NumofSeats);
                 }
-                else if (Type == "Econmic Ticket")
+                else if (Type == "Economic Ticket")
                 {
                     decimal price = 260;
 
@@ -109,21 +110,20 @@ namespace TrainBooking
                     {
                         Bk.AddTicket(connection, PassengerID, tripID, Type, price);
                         seatNumber = Bk.UpdateSeatNumber(connection, tripID);
-                        Bk.UpdateTicket(connection, PassengerID, tripID, seatNumber, intializeLastTicket() - 1);
+                        Bk.UpdateTicket(connection, PassengerID, tripID, seatNumber, intializeLastTicket());
                         TicketID = Bk.getTicketNumber(connection);
                         Bk.AddTicketToBook(connection, BookingID, TicketID);
                     }
                 }
                 MessageBox.Show("The Booking is done!");
+                ShowTicketForm TicketForm = new ShowTicketForm();
+                TicketForm.TicketNum = TicketNumber;
+                TicketForm.ShowDialog();
             }
             else
             {
-                MessageBox.Show("The Train is Full");
+                MessageBox.Show($"The Train Has {TrainCapacity - seatNumber} Seats only");
             }
-
-            ShowTicketForm TicketForm = new ShowTicketForm();
-            TicketForm.TicketNum = TicketNumber;
-            TicketForm.ShowDialog();
         }
 
     }

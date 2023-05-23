@@ -28,14 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.button2 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.BookingID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.TicketID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.BookingID = new System.Windows.Forms.NumericUpDown();
+            this.TicketID = new System.Windows.Forms.NumericUpDown();
+            this.BookingErr = new System.Windows.Forms.ErrorProvider(this.components);
+            this.TicketErr = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BookingID)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TicketID)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BookingErr)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TicketErr)).BeginInit();
             this.SuspendLayout();
             // 
             // button2
@@ -55,14 +62,14 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Tai Le", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Tai Le", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(51, 27);
             this.dataGridView1.Name = "dataGridView1";
@@ -71,14 +78,6 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(778, 322);
             this.dataGridView1.TabIndex = 3;
-            // 
-            // BookingID
-            // 
-            this.BookingID.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.BookingID.Location = new System.Drawing.Point(313, 387);
-            this.BookingID.Name = "BookingID";
-            this.BookingID.Size = new System.Drawing.Size(316, 34);
-            this.BookingID.TabIndex = 5;
             // 
             // label1
             // 
@@ -91,14 +90,6 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Booking ID";
             // 
-            // TicketID
-            // 
-            this.TicketID.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.TicketID.Location = new System.Drawing.Point(313, 456);
-            this.TicketID.Name = "TicketID";
-            this.TicketID.Size = new System.Drawing.Size(316, 34);
-            this.TicketID.TabIndex = 7;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -110,6 +101,60 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "Ticket ID";
             // 
+            // BookingID
+            // 
+            this.BookingID.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.5F);
+            this.BookingID.Location = new System.Drawing.Point(301, 392);
+            this.BookingID.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.BookingID.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.BookingID.Name = "BookingID";
+            this.BookingID.Size = new System.Drawing.Size(336, 33);
+            this.BookingID.TabIndex = 8;
+            this.BookingID.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // TicketID
+            // 
+            this.TicketID.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.5F);
+            this.TicketID.Location = new System.Drawing.Point(301, 456);
+            this.TicketID.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.TicketID.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.TicketID.Name = "TicketID";
+            this.TicketID.Size = new System.Drawing.Size(336, 33);
+            this.TicketID.TabIndex = 9;
+            this.TicketID.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // BookingErr
+            // 
+            this.BookingErr.ContainerControl = this;
+            // 
+            // TicketErr
+            // 
+            this.TicketErr.ContainerControl = this;
+            // 
             // ListBookingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -117,8 +162,8 @@
             this.BackColor = System.Drawing.SystemColors.Highlight;
             this.ClientSize = new System.Drawing.Size(892, 602);
             this.Controls.Add(this.TicketID);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.BookingID);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button2);
@@ -126,6 +171,10 @@
             this.Text = "ListBopking";
             this.Load += new System.EventHandler(this.ListBopking_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BookingID)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TicketID)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BookingErr)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TicketErr)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -135,9 +184,11 @@
 
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox BookingID;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox TicketID;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.NumericUpDown BookingID;
+        private System.Windows.Forms.NumericUpDown TicketID;
+        private System.Windows.Forms.ErrorProvider BookingErr;
+        private System.Windows.Forms.ErrorProvider TicketErr;
     }
 }

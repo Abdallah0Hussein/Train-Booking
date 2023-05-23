@@ -90,6 +90,18 @@ namespace TrainBooking
                  reader.Close();
             }
             return this;
-        }    
+        }
+
+        public static void UpdateNumOfPassenger(int TripID, int incrementNum)
+        {
+            DBConnection conn = new DBConnection();
+            SqlConnection connection = conn.ConnectToDatabase();
+
+            SqlCommand command = new SqlCommand($"UPDATE Trip SET NumberOfPassengers += {incrementNum} WHERE TripID = {TripID}", connection);
+
+            command.ExecuteNonQuery();
+        }
+        
+
     }
 }
